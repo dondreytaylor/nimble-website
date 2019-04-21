@@ -1,0 +1,192 @@
+$mobile: 40em;
+$tablet: 64em;
+
+@font-face {
+  font-family: "HelveticaNeueRegular";
+  src: url("/static/assets/fonts/helvetica-neue/regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueCondensedBlack";
+  src: url("/static/assets/fonts/helvetica-neue/condensed-black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueUltraLight";
+  src: url("/static/assets/fonts/helvetica-neue/ultralight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueLight";
+  src: url("/static/assets/fonts/helvetica-neue/light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueThin";
+  src: url("/static/assets/fonts/helvetica-neue/thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("/static/assets/fonts/helvetica-neue/bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("/static/assets/fonts/helvetica-neue/medium.ttf") format("truetype");
+}
+
+* {
+  font-family: "HelveticaNeueRegular";
+  box-sizing: border-box;
+}
+
+strong {
+  font-family: "HelveticaNeueBold";
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  min-height: 5rem;
+  border-bottom: 0.1rem solid rgba(255,255,255,0.1);
+  z-index: 2;
+  div[data-name="wrapper"] {
+      max-width: $tablet;
+      width: 85%;
+      margin: 0 auto;
+      & > a {
+          display: inline-block;
+          vertical-align: middle;
+          margin-top: 0.7rem;
+          @media (max-width: $mobile) {
+              display: block;
+          }
+          & > div {
+              width: 3.5rem;
+              height: 3.5rem;
+              background-position: center center;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-image: url(/static/assets/images/header-logo.png);
+              @media (max-width: $mobile) {
+                margin: 0 auto;
+              }
+          }
+      }
+      div[data-name="links"] {
+        display: inline-block;
+        vertical-align: middle;
+        float: right;
+        margin-top: 1.7rem;
+        @media (max-width: $mobile) {
+          float: none;
+          width: 100%;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        a {
+          color: #FFFFFF;
+          text-decoration: none;
+          margin-left: 3.5rem;
+          margin-bottom: 0.5rem;
+          display: inline-block;
+          @media (max-width: $mobile) {
+            margin-left: 1rem;
+            font-size: 0.8rem;
+          }
+
+          &:hover {
+            opacity: 0.9;
+            color: #28FF00;
+          }
+          &:last-child {
+              color: #28FF00;
+              font-family: "HelveticaNeueBold";
+              position: relative;
+              & > div {
+                position: absolute;
+                width: 2.5rem;
+                height: 0.25rem;
+                border-radius: 0.25rem;
+                background-color: transparent;
+                left: 2.5rem;
+                bottom: -1rem;
+                transition: all 0.2s ease;
+              }
+              @media (min-width: $mobile) {
+                &:hover {
+                  & > div {
+                    bottom: -0.8rem;
+                    background-color: #28FF00;
+                    transition: all 0.2s ease;
+                  }
+                }
+              }
+          }
+        }
+      }
+  }
+}
+
+section[data-name="introduction"] {
+      overflow: auto;
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(/static/assets/images/nimble-background.png);
+      div[data-name="content"] {
+          max-width: $tablet;
+          width: 85%;
+          margin: 12rem auto 10rem auto;
+          position: relative;
+          z-index: 2;
+          @media (max-width: $mobile) {
+              margin-top: 15rem;
+          }
+
+          div[data-name="wrapper"] {
+              width: 100%;
+              max-width: 30rem;
+              h1 {
+                  color: #28FF00;
+                  font-size: 3.8rem;
+                  font-family: "HelveticaNeueThin";
+                  margin: 0 0 0.5rem 0;
+                  @media (max-width: $mobile) {
+                      font-size: 2.8rem;
+                  }
+              }
+              p {
+                  color: #FFFFFF;
+                  line-height: 1.8;
+                  font-size: 1.1rem;
+                  @media (max-width: $mobile) {
+                      font-size: 1rem;
+                  }
+              }
+              small {
+                color: #FFFFFF;
+              }
+              a {
+                  display: block;
+                  max-width: 10rem;
+                  padding: 0.7rem 1rem;
+                  border-radius: 2rem;
+                  margin: 2rem 0 2rem 0;
+                  color: #000000;
+                  border: 0.1rem solid #000000;
+                  background-color: #28FF00;
+                  text-decoration: none;
+                  text-align: center;
+                  &:hover {
+                    background-color: #21D000;
+                  }
+              }
+          }
+      }
+}

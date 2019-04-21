@@ -53,13 +53,23 @@ var initialization = async function() {
 	// Handles public file routing
 	server.route({
 	    method: 'GET',
-	    path: '/{param*}',
+	    path: '/static/{param*}',
 	    handler: {
 	        directory: {
 	            path: 'public',
 	            listing: true
 	        }
 	    }
+	});
+
+	// Base HTTP route
+	server.route({
+			method: 'GET',
+			path: '/{param*}',
+			handler: function(request, reply)
+			{
+					return reply.view('embed-base', {});
+			}
 	});
 
 	// Attempt to start the HTTP Server
