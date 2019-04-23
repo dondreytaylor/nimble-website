@@ -23,6 +23,9 @@
   font-family: "HelveticaNeueRegular";
   box-sizing: border-box; }
 
+html, body {
+  background-color: #F3F3F3; }
+
 strong {
   font-family: "HelveticaNeueBold"; }
 
@@ -147,3 +150,477 @@ section[data-name="introduction"] {
         text-align: center; }
         section[data-name="introduction"] div[data-name="content"] div[data-name="wrapper"] a:hover {
           background-color: #21D000; }
+
+section[data-name="smallestaround"] {
+  min-height: 100vh; }
+  section[data-name="smallestaround"] div[data-name="content"] {
+    max-width: 55rem;
+    margin: 5rem auto 2rem auto;
+    width: 90%;
+    height: 22.5rem;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    box-sizing: content-box;
+    border: 0.2rem solid #21D000;
+    overflow: hidden; }
+    @media (max-width: 64em) {
+      section[data-name="smallestaround"] div[data-name="content"] {
+        display: block;
+        height: auto;
+        max-width: 40em;
+        padding-top: 1rem; } }
+    @media (max-width: 40em) {
+      section[data-name="smallestaround"] div[data-name="content"] {
+        border-radius: 0; } }
+    section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] {
+      display: inline-block;
+      max-width: 26rem;
+      padding: 3rem 1rem 3rem 3rem; }
+      @media (max-width: 64em) {
+        section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] {
+          padding: 1.5rem; } }
+      section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] small {
+        display: block;
+        color: #000000;
+        font-family: "HelveticaNeueMedium"; }
+      section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] h3 {
+        color: #21D000;
+        font-size: 2rem;
+        margin: 0.5rem 0;
+        line-height: 1.5;
+        font-family: "HelveticaNeueBold"; }
+        @media (max-width: 64em) {
+          section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] h3 {
+            font-size: 1.8rem; } }
+      section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] p {
+        line-height: 2;
+        font-size: 0.9rem;
+        margin: 0; }
+        @media (max-width: 64em) {
+          section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] p {
+            font-size: 0.8rem; } }
+      @media (max-width: 64em) {
+        section[data-name="smallestaround"] div[data-name="content"] div[data-name="text"] {
+          display: block;
+          margin: 0 auto; } }
+    section[data-name="smallestaround"] div[data-name="content"] div[data-name="preview"] {
+      display: inline-block;
+      float: right;
+      width: 100%;
+      max-width: 25rem;
+      height: 22.5rem;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url(/static/assets/images/nimble-size.png);
+      position: relative; }
+      @media (max-width: 64em) {
+        section[data-name="smallestaround"] div[data-name="content"] div[data-name="preview"] {
+          float: none;
+          max-width: 100%;
+          margin: 0 auto;
+          display: block;
+          height: 35rem; } }
+      @media (max-width: 40em) {
+        section[data-name="smallestaround"] div[data-name="content"] div[data-name="preview"] {
+          height: 30rem;
+          width: 100%; } }
+      @media (max-width: 30em) {
+        section[data-name="smallestaround"] div[data-name="content"] div[data-name="preview"] {
+          height: 20rem; } }
+  section[data-name="smallestaround"] div[data-name="previews"] {
+    text-align: center; }
+    section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"] {
+      max-width: 16.5rem;
+      width: 90%;
+      display: inline-block;
+      margin: 1rem; }
+      @media (max-width: 64em) {
+        section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"] {
+          max-width: 40em; } }
+      @media (max-width: 40em) {
+        section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"] {
+          max-width: inherit;
+          margin: 1rem auto; } }
+      section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"] > div {
+        width: 100%;
+        height: 13rem;
+        border-radius: 0.5rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 0.1rem solid #28FF00; }
+        @media (max-width: 64em) {
+          section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"] > div {
+            height: 30rem;
+            border-radius: 0; } }
+        @media (max-width: 40em) {
+          section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"] > div {
+            height: 20rem; } }
+      section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"] > p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        max-width: 16rem;
+        margin: 0.5rem auto; }
+      section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"]:nth-child(1) > div {
+        background-image: url(/static/assets/images/landing-preview-1.png); }
+      section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"]:nth-child(2) > div {
+        background-image: url(/static/assets/images/landing-preview-2.png); }
+      section[data-name="smallestaround"] div[data-name="previews"] div[data-name="preview"]:nth-child(3) > div {
+        background-image: url(/static/assets/images/landing-preview-3.png); }
+
+section[data-name="plugandplay"] {
+  min-height: 100vh; }
+  section[data-name="plugandplay"] div[data-name="content"] {
+    max-width: 55rem;
+    margin: 3rem auto;
+    width: 90%;
+    height: 22.5rem;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #21D000;
+    overflow: hidden;
+    box-sizing: content-box; }
+    @media (max-width: 64em) {
+      section[data-name="plugandplay"] div[data-name="content"] {
+        display: block;
+        height: auto;
+        max-width: 40em; } }
+    @media (max-width: 40em) {
+      section[data-name="plugandplay"] div[data-name="content"] {
+        border-radius: 0; } }
+    section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] {
+      display: inline-block;
+      max-width: 24rem;
+      padding: 3rem 1rem 3rem 3rem; }
+      @media (max-width: 64em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] {
+          padding: 1.5rem; } }
+      section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] small {
+        display: block;
+        color: #000000;
+        font-family: "HelveticaNeueMedium"; }
+      section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] h3 {
+        color: #21D000;
+        font-size: 2rem;
+        margin: 0.5rem 0;
+        line-height: 1.5;
+        font-family: "HelveticaNeueBold"; }
+        @media (max-width: 64em) {
+          section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] h3 {
+            font-size: 1.7rem; } }
+      section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] p {
+        line-height: 2;
+        font-size: 0.9rem;
+        margin: 0; }
+        @media (max-width: 64em) {
+          section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] p {
+            font-size: 0.8rem; } }
+      @media (max-width: 64em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="text"] {
+          display: block;
+          margin: 0 auto; } }
+    section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview"] {
+      display: inline-block;
+      float: right;
+      width: 28rem;
+      height: 22.5rem;
+      position: relative;
+      overflow: hidden; }
+      @media (max-width: 64em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview"] {
+          float: none;
+          margin: 0 auto;
+          display: block;
+          width: 100%;
+          height: 35rem;
+          display: none; } }
+      @media (max-width: 40em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview"] {
+          height: 30rem; } }
+      @media (max-width: 30em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview"] {
+          background-size: cover;
+          height: 20rem; } }
+      section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview"] video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 10%;
+        object-fit: cover; }
+    section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview-mobile"] {
+      width: 28rem;
+      height: 22.5rem;
+      position: relative;
+      overflow: hidden;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(/static/assets/media/setup.gif);
+      display: none; }
+      @media (max-width: 64em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview-mobile"] {
+          margin: 0 auto;
+          display: block;
+          width: 100%;
+          height: 35rem; } }
+      @media (max-width: 40em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview-mobile"] {
+          height: 30rem; } }
+      @media (max-width: 30em) {
+        section[data-name="plugandplay"] div[data-name="content"] div[data-name="preview-mobile"] {
+          background-size: cover;
+          height: 20rem; } }
+  section[data-name="plugandplay"] div[data-name="mobile"] {
+    max-width: 55rem;
+    margin: 3rem auto;
+    padding: 2rem 1rem 0 1rem;
+    width: 90%;
+    background-color: #28FF00;
+    border: 0.2rem solid #28FF00;
+    border-bottom: none;
+    border-radius: 0.5rem;
+    overflow: hidden; }
+    @media (max-width: 64em) {
+      section[data-name="plugandplay"] div[data-name="mobile"] {
+        display: block;
+        max-width: 40em; } }
+    @media (max-width: 40em) {
+      section[data-name="plugandplay"] div[data-name="mobile"] {
+        border-radius: 0; } }
+    section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] {
+      display: block;
+      margin: 0 auto;
+      text-align: center; }
+      @media (max-width: 64em) {
+        section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] {
+          padding: 1.5rem; } }
+      section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] small {
+        display: block;
+        color: #000000;
+        font-family: "HelveticaNeueMedium"; }
+      section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] h3 {
+        color: #000000;
+        font-size: 2rem;
+        margin: 0.5rem 0;
+        line-height: 1.5;
+        font-family: "HelveticaNeueBold"; }
+        @media (max-width: 64em) {
+          section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] h3 {
+            font-size: 1.8rem; } }
+      section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] p {
+        line-height: 2;
+        font-size: 0.9rem;
+        margin: 0 auto 2rem auto;
+        max-width: 30rem; }
+        @media (max-width: 64em) {
+          section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] p {
+            font-size: 0.8rem; } }
+      @media (max-width: 64em) {
+        section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] {
+          display: block;
+          margin: 0 auto; } }
+      section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] div[data-name="points"] div[data-name="point"] {
+        display: inline-block;
+        font-size: 0.9rem;
+        margin: 0 2rem 2rem 2rem; }
+        section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] div[data-name="points"] div[data-name="point"] > i {
+          display: block;
+          font-size: 2.3rem;
+          margin: 0 0 0.5rem 0;
+          color: rgba(0, 0, 0, 0.8); }
+        section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="text"] div[data-name="points"] div[data-name="point"] > span {
+          vertical-align: middle;
+          font-size: 1rem;
+          color: rgba(0, 0, 0, 0.8);
+          font-family: "HelveticaNeueThin"; }
+    section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="preview"] {
+      display: block;
+      position: relative;
+      bottom: -1.5rem;
+      width: 30rem;
+      height: 25rem;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url(/static/assets/images/mobile-preview.png);
+      margin: 0 auto; }
+
+section[data-name="yourfavoritecoin"] {
+  min-height: 100vh;
+  min-height: 100vh; }
+  section[data-name="yourfavoritecoin"] div[data-name="content"] {
+    max-width: 55rem;
+    margin: 3rem auto;
+    width: 90%;
+    background-color: #FFFFFF;
+    border-radius: 0.5rem;
+    border: 0.2rem solid #21D000;
+    overflow: hidden;
+    padding: 3rem 3rem 5rem 3rem; }
+    @media (max-width: 64em) {
+      section[data-name="yourfavoritecoin"] div[data-name="content"] {
+        display: block;
+        height: auto;
+        max-width: 40em;
+        padding-top: 1rem; } }
+    @media (max-width: 40em) {
+      section[data-name="yourfavoritecoin"] div[data-name="content"] {
+        border-radius: 0; } }
+    section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] {
+      display: block;
+      max-width: 40rem;
+      margin: 0 auto;
+      text-align: center; }
+      @media (max-width: 64em) {
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] {
+          padding: 1.5rem; } }
+      section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] small {
+        display: block;
+        color: #000000;
+        font-family: "HelveticaNeueMedium"; }
+      section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] h3 {
+        color: #000000;
+        font-size: 2rem;
+        margin: 0.5rem 0 1rem 0;
+        line-height: 1.8;
+        font-family: "HelveticaNeueBold"; }
+        @media (max-width: 64em) {
+          section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] h3 {
+            font-size: 1.7rem; } }
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] h3 > strong:nth-child(3) {
+          color: #21D000;
+          border-bottom: 0.1rem solid #21D000;
+          padding: 0 0 0.5rem 0; }
+      section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] p {
+        line-height: 2;
+        font-size: 0.9rem;
+        margin: 0 0 2rem 0; }
+        @media (max-width: 64em) {
+          section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] p {
+            font-size: 0.8rem; } }
+      @media (max-width: 64em) {
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="text"] {
+          display: block;
+          margin: 0 auto; } }
+    section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="coins"] {
+      text-align: center;
+      margin-bottom: 3rem; }
+      section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="coins"] div[data-name="coin"] {
+        width: 7rem;
+        display: inline-block;
+        margin: 0 2rem 2rem 2rem; }
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="coins"] div[data-name="coin"] > div {
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 7rem;
+          margin: 0 0 0.8rem 0; }
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="coins"] div[data-name="coin"] > span {
+          color: #21D000;
+          font-size: 0.9rem; }
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="coins"] div[data-name="coin"]:nth-child(1) > div {
+          background-image: url(/static/assets/images/coin-bitcoin.png); }
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="coins"] div[data-name="coin"]:nth-child(2) > div {
+          background-image: url(/static/assets/images/coin-ethereum.png); }
+        section[data-name="yourfavoritecoin"] div[data-name="content"] div[data-name="coins"] div[data-name="coin"]:nth-child(3) > div {
+          background-image: url(/static/assets/images/coin-bithereum.png); }
+    section[data-name="yourfavoritecoin"] div[data-name="content"] > p {
+      text-align: center;
+      font-size: 0.9rem;
+      margin: 0 0 1rem 0; }
+    section[data-name="yourfavoritecoin"] div[data-name="content"] > .button {
+      color: #21D000;
+      border: 0.1rem solid #21D000;
+      padding: 0.8rem 2rem;
+      font-size: 0.9rem;
+      font-family: "HelveticaNeueMedium";
+      display: block;
+      max-width: 13rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 auto; }
+      section[data-name="yourfavoritecoin"] div[data-name="content"] > .button:hover {
+        background-color: #21D000;
+        color: #000000; }
+  section[data-name="yourfavoritecoin"] div[data-name="ourmission"] {
+    max-width: 50rem;
+    margin: 3rem auto;
+    width: 90%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    padding: 3rem 1rem 5rem 1rem; }
+    @media (max-width: 64em) {
+      section[data-name="yourfavoritecoin"] div[data-name="ourmission"] {
+        display: block;
+        height: auto;
+        max-width: 40em; } }
+    section[data-name="yourfavoritecoin"] div[data-name="ourmission"] h3 {
+      font-size: 1.9rem;
+      margin: 0 0 0.5rem 0;
+      font-family: "HelveticaNeueBold"; }
+      @media (max-width: 64em) {
+        section[data-name="yourfavoritecoin"] div[data-name="ourmission"] h3 {
+          font-size: 1.7rem; } }
+    section[data-name="yourfavoritecoin"] div[data-name="ourmission"] p {
+      line-height: 1.8;
+      font-size: 0.95rem;
+      margin: 0 0 2rem 0; }
+    section[data-name="yourfavoritecoin"] div[data-name="ourmission"] .button {
+      color: #28FF00;
+      border: 0.1rem solid #28FF00;
+      background-color: #28FF00;
+      padding: 0.8rem 2rem;
+      font-size: 0.95rem;
+      font-family: "HelveticaNeueMedium";
+      display: block;
+      max-width: 13rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      text-align: center;
+      margin: 0 auto;
+      color: #000000; }
+      section[data-name="yourfavoritecoin"] div[data-name="ourmission"] .button:hover {
+        border: 0.1rem solid #21D000;
+        background-color: #21D000; }
+
+footer {
+  width: 100%;
+  min-height: 30rem;
+  background-color: #28FF00;
+  padding: 3rem 1rem; }
+  footer h3 {
+    font-size: 2.1rem;
+    display: block;
+    text-align: center;
+    margin: 1rem 0 0.5rem 0; }
+  footer div[data-name="logo"] {
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(/static/assets/images/footer-logo.png); }
+  footer div[data-name="links"] {
+    text-align: center;
+    margin: 0 0 4rem 0; }
+    footer div[data-name="links"] a {
+      color: #000000;
+      text-decoration: none;
+      display: inline-block;
+      margin: 1.5rem;
+      font-size: 0.95rem; }
+      footer div[data-name="links"] a:hover {
+        opacity: 0.6; }
+  footer small {
+    display: block;
+    text-align: center;
+    font-size: 0.95rem;
+    font-family: "HelveticaNeueLight"; }
+    footer small span {
+      font-family: "HelveticaNeueLight"; }

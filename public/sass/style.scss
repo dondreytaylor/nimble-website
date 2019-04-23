@@ -41,6 +41,10 @@ $tablet: 64em;
   box-sizing: border-box;
 }
 
+html, body {
+  background-color: #F3F3F3;
+}
+
 strong {
   font-family: "HelveticaNeueBold";
 }
@@ -189,4 +193,571 @@ section[data-name="introduction"] {
               }
           }
       }
+}
+
+section[data-name="smallestaround"] {
+  min-height: 100vh;
+  div[data-name="content"] {
+      max-width: 55rem;
+      margin: 5rem auto 2rem auto;
+      width: 90%;
+      height: 22.5rem;
+      background-color: #FFFFFF;
+      border-radius: 0.5rem;
+      box-sizing: content-box;
+      border: 0.2rem solid #21D000;
+      overflow: hidden;
+      @media (max-width: $tablet) {
+          display: block;
+          height: auto;
+          max-width: $mobile;
+          padding-top: 1rem;
+      }
+      @media (max-width: $mobile) {
+          border-radius: 0;
+      }
+      div[data-name="text"] {
+          display: inline-block;
+          max-width: 26rem;
+          padding: 3rem 1rem 3rem 3rem;
+          @media (max-width: $tablet) {
+              padding: 1.5rem;
+          }
+          small {
+            display: block;
+            color: #000000;
+            font-family: "HelveticaNeueMedium";
+          }
+          h3 {
+            color: #21D000;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            line-height: 1.5;
+            font-family: "HelveticaNeueBold";
+            @media (max-width: $tablet) {
+              font-size: 1.8rem;
+            }
+          }
+          p {
+              line-height: 2;
+              font-size: 0.9rem;
+              margin: 0;
+              @media (max-width: $tablet) {
+                font-size: 0.8rem;
+              }
+          }
+          @media (max-width: $tablet) {
+              display: block;
+              margin: 0 auto;
+          }
+      }
+
+      div[data-name="preview"] {
+          display: inline-block;
+          float: right;
+          width: 100%;
+          max-width: 25rem;
+          height: 22.5rem;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-image: url(/static/assets/images/nimble-size.png);
+          position: relative;
+          @media (max-width: $tablet) {
+              float: none;
+              max-width: 100%;
+              margin: 0 auto;
+              display: block;
+              height: 35rem;
+          }
+          @media (max-width: $mobile) {
+              height: 30rem;
+              width: 100%;
+          }
+          @media (max-width: 30em) {
+              height: 20rem;
+          }
+      }
+  }
+  div[data-name="previews"] {
+      text-align: center;
+      div[data-name="preview"] {
+          max-width: 16.5rem;
+          width: 90%;
+          display: inline-block;
+          margin: 1rem;
+          @media (max-width: $tablet) {
+              max-width: $mobile;
+          }
+
+          @media (max-width: $mobile) {
+              max-width: inherit;
+              margin: 1rem auto;
+          }
+
+          & > div {
+            width: 100%;
+            height: 13rem;
+            border-radius: 0.5rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 0.1rem solid #28FF00;
+            @media (max-width: $tablet) {
+                height: 30rem;
+                border-radius: 0;
+            }
+
+            @media (max-width: $mobile) {
+                height: 20rem;
+            }
+          }
+          & > p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            max-width: 16rem;
+            margin: 0.5rem auto;
+          }
+          &:nth-child(1) {
+             & > div {
+                background-image: url(/static/assets/images/landing-preview-1.png);
+             }
+          }
+          &:nth-child(2) {
+             & > div {
+                background-image: url(/static/assets/images/landing-preview-2.png);
+             }
+          }
+          &:nth-child(3) {
+             & > div {
+                background-image: url(/static/assets/images/landing-preview-3.png);
+             }
+          }
+      }
+  }
+}
+
+section[data-name="plugandplay"] {
+  min-height: 100vh;
+
+  div[data-name="content"] {
+      max-width: 55rem;
+      margin: 3rem auto;
+      width: 90%;
+      height: 22.5rem;
+      background-color: #FFFFFF;
+      border-radius: 0.5rem;
+      border: 0.2rem solid #21D000;
+      overflow: hidden;
+      box-sizing: content-box;
+      @media (max-width: $tablet) {
+          display: block;
+          height: auto;
+          max-width: $mobile;
+      }
+      @media (max-width: $mobile) {
+          border-radius: 0;
+      }
+      div[data-name="text"] {
+          display: inline-block;
+          max-width: 24rem;
+          padding: 3rem 1rem 3rem 3rem;
+          @media (max-width: $tablet) {
+              padding: 1.5rem;
+          }
+          small {
+            display: block;
+            color: #000000;
+            font-family: "HelveticaNeueMedium";
+          }
+          h3 {
+            color: #21D000;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            line-height: 1.5;
+            font-family: "HelveticaNeueBold";
+            @media (max-width: $tablet) {
+              font-size: 1.7rem;
+            }
+          }
+          p {
+              line-height: 2;
+              font-size: 0.9rem;
+              margin: 0;
+              @media (max-width: $tablet) {
+                font-size: 0.8rem;
+              }
+          }
+          @media (max-width: $tablet) {
+              display: block;
+              margin: 0 auto;
+          }
+      }
+
+      div[data-name="preview"] {
+          display: inline-block;
+          float: right;
+          width: 28rem;
+          height: 22.5rem;
+          position: relative;
+          overflow: hidden;
+          @media (max-width: $tablet) {
+              float: none;
+              margin: 0 auto;
+              display: block;
+              width: 100%;
+              height: 35rem;
+              display: none;
+          }
+          @media (max-width: $mobile) {
+              height: 30rem;
+          }
+          @media (max-width: 30em) {
+              background-size: cover;
+              height: 20rem;
+          }
+          video {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 10%;
+            object-fit: cover;
+          }
+      }
+
+      div[data-name="preview-mobile"] {
+          width: 28rem;
+          height: 22.5rem;
+          position: relative;
+          overflow: hidden;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(/static/assets/media/setup.gif);
+          display: none;
+          @media (max-width: $tablet) {
+              margin: 0 auto;
+              display: block;
+              width: 100%;
+              height: 35rem;
+          }
+          @media (max-width: $mobile) {
+              height: 30rem;
+          }
+          @media (max-width: 30em) {
+              background-size: cover;
+              height: 20rem;
+          }
+      }
+  }
+
+  div[data-name="mobile"] {
+      max-width: 55rem;
+      margin: 3rem auto;
+      padding: 2rem 1rem 0 1rem;
+      width: 90%;
+      background-color: #28FF00;
+      border: 0.2rem solid #28FF00;
+      border-bottom: none;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      @media (max-width: $tablet) {
+          display: block;
+          max-width: $mobile;
+      }
+      @media (max-width: $mobile) {
+         border-radius: 0;
+      }
+      div[data-name="text"] {
+          display: block;
+          margin: 0 auto;
+          text-align: center;
+          @media (max-width: $tablet) {
+              padding: 1.5rem;
+          }
+          small {
+            display: block;
+            color: #000000;
+            font-family: "HelveticaNeueMedium";
+          }
+          h3 {
+            color: #000000;
+            font-size: 2rem;
+            margin: 0.5rem 0;
+            line-height: 1.5;
+            font-family: "HelveticaNeueBold";
+            @media (max-width: $tablet) {
+              font-size: 1.8rem;
+            }
+          }
+          p {
+              line-height: 2;
+              font-size: 0.9rem;
+              margin: 0 auto 2rem auto;
+              max-width: 30rem;
+              @media (max-width: $tablet) {
+                font-size: 0.8rem;
+              }
+          }
+          @media (max-width: $tablet) {
+              display: block;
+              margin: 0 auto;
+          }
+          div[data-name="points"] {
+            div[data-name="point"] {
+                display: inline-block;
+                font-size: 0.9rem;
+                margin: 0 2rem 2rem 2rem;
+                & > i {
+                  display: block;
+                  font-size: 2.3rem;
+                  margin: 0 0 0.5rem 0;
+                  color: rgba(0,0,0,0.8);
+                }
+                & > span {
+                  vertical-align: middle;
+                  font-size: 1rem;
+                  color: rgba(0,0,0,0.8);
+                  font-family: "HelveticaNeueThin";
+                }
+            }
+          }
+      }
+
+      div[data-name="preview"] {
+          display: block;
+          position: relative;
+          bottom: -1.5rem;
+          width: 30rem;
+          height: 25rem;
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-image: url(/static/assets/images/mobile-preview.png);
+          margin: 0 auto;
+      }
+  }
+}
+
+section[data-name="yourfavoritecoin"] {
+  min-height: 100vh;
+  min-height: 100vh;
+
+  div[data-name="content"] {
+      max-width: 55rem;
+      margin: 3rem auto;
+      width: 90%;
+      background-color: #FFFFFF;
+      border-radius: 0.5rem;
+      border: 0.2rem solid #21D000;
+      overflow: hidden;
+      padding: 3rem 3rem 5rem 3rem;
+      @media (max-width: $tablet) {
+          display: block;
+          height: auto;
+          max-width: $mobile;
+          padding-top: 1rem;
+      }
+      @media (max-width: $mobile) {
+          border-radius: 0;
+      }
+      div[data-name="text"] {
+          display: block;
+          max-width: 40rem;
+          margin: 0 auto;
+          text-align: center;
+          @media (max-width: $tablet) {
+              padding: 1.5rem;
+          }
+
+          small {
+            display: block;
+            color: #000000;
+            font-family: "HelveticaNeueMedium";
+          }
+
+          h3 {
+            color: #000000;
+            font-size: 2rem;
+            margin: 0.5rem 0 1rem 0;
+            line-height: 1.8;
+            font-family: "HelveticaNeueBold";
+            @media (max-width: $tablet) {
+              font-size: 1.7rem;
+            }
+            & > strong:nth-child(3) {
+                color: #21D000;
+                border-bottom: 0.1rem solid #21D000;
+                padding: 0 0 0.5rem 0;
+            }
+          }
+
+          p {
+              line-height: 2;
+              font-size: 0.9rem;
+              margin: 0 0 2rem 0;
+              @media (max-width: $tablet) {
+                font-size: 0.8rem;
+              }
+          }
+          @media (max-width: $tablet) {
+              display: block;
+              margin: 0 auto;
+          }
+      }
+
+      div[data-name="coins"] {
+        text-align: center;
+        margin-bottom: 3rem;
+        div[data-name="coin"] {
+            width: 7rem;
+            display: inline-block;
+            margin: 0 2rem 2rem 2rem;
+            & > div {
+                background-position: center center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 100%;
+                height: 7rem;
+                margin: 0 0 0.8rem 0;
+            }
+            & > span {
+                color: #21D000;
+                font-size: 0.9rem;
+            }
+            &:nth-child(1) {
+              & > div {
+                  background-image: url(/static/assets/images/coin-bitcoin.png);
+              }
+            }
+            &:nth-child(2) {
+              & > div {
+                  background-image: url(/static/assets/images/coin-ethereum.png);
+              }
+            }
+            &:nth-child(3) {
+              & > div {
+                  background-image: url(/static/assets/images/coin-bithereum.png);
+              }
+            }
+        }
+      }
+
+      & > p {
+        text-align: center;
+        font-size: 0.9rem;
+        margin: 0 0 1rem 0;
+      }
+
+      & > .button {
+          color: #21D000;
+          border: 0.1rem solid #21D000;
+          padding: 0.8rem 2rem;
+          font-size: 0.9rem;
+          font-family: "HelveticaNeueMedium";
+          display: block;
+          max-width: 13rem;
+          border-radius: 2rem;
+          text-decoration: none;
+          text-align: center;
+          margin: 0 auto;
+          &:hover {
+            background-color: #21D000;
+            color: #000000;
+          }
+      }
+  }
+
+  div[data-name="ourmission"] {
+      max-width: 50rem;
+      margin: 3rem auto;
+      width: 90%;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      text-align: center;
+      padding: 3rem 1rem 5rem 1rem;
+      @media (max-width: $tablet) {
+          display: block;
+          height: auto;
+          max-width: $mobile;
+      }
+      h3 {
+        font-size: 1.9rem;
+        margin: 0 0 0.5rem 0;
+        font-family: "HelveticaNeueBold";
+        @media (max-width: $tablet) {
+            font-size: 1.7rem;
+        }
+      }
+      p {
+        line-height: 1.8;
+        font-size: 0.95rem;
+        margin: 0 0 2rem 0;
+      }
+      .button {
+          color: #28FF00;
+          border: 0.1rem solid #28FF00;
+          background-color: #28FF00;
+          padding: 0.8rem 2rem;
+          font-size: 0.95rem;
+          font-family: "HelveticaNeueMedium";
+          display: block;
+          max-width: 13rem;
+          border-radius: 2rem;
+          text-decoration: none;
+          text-align: center;
+          margin: 0 auto;
+          color: #000000;
+          &:hover {
+            border: 0.1rem solid #21D000;
+            background-color: #21D000;
+          }
+      }
+  }
+}
+
+footer {
+    width: 100%;
+    min-height: 30rem;
+    background-color: #28FF00;
+    padding: 3rem 1rem;
+    h3 {
+      font-size: 2.1rem;
+      display: block;
+      text-align: center;
+      margin: 1rem 0 0.5rem 0;
+    }
+    div[data-name="logo"] {
+        width: 9rem;
+        height: 9rem;
+        margin: 0 auto;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url(/static/assets/images/footer-logo.png);
+    }
+    div[data-name="links"] {
+        text-align: center;
+        margin: 0 0 4rem 0;
+        a {
+          color: #000000;
+          text-decoration: none;
+          display: inline-block;
+          margin: 1.5rem;
+          font-size: 0.95rem;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+    }
+    small {
+        display: block;
+        text-align: center;
+        font-size: 0.95rem;
+        font-family: "HelveticaNeueLight";
+        span {
+          font-family: "HelveticaNeueLight";
+        }
+    }
 }
