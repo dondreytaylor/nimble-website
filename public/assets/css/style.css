@@ -446,6 +446,9 @@ section[data-name="plugandplay"] {
       background-repeat: no-repeat;
       background-image: url(/static/assets/images/mobile-preview.png);
       margin: 0 auto; }
+      @media (max-width: 40em) {
+        section[data-name="plugandplay"] div[data-name="mobile"] div[data-name="preview"] {
+          right: 3rem; } }
 
 section[data-name="yourfavoritecoin"] {
   min-height: 100vh;
@@ -464,7 +467,7 @@ section[data-name="yourfavoritecoin"] {
         display: block;
         height: auto;
         max-width: 40em;
-        padding-top: 1rem; } }
+        padding: 1rem 0.5rem 5rem 0.5rem; } }
     @media (max-width: 40em) {
       section[data-name="yourfavoritecoin"] div[data-name="content"] {
         border-radius: 0; } }
@@ -569,7 +572,11 @@ section[data-name="yourfavoritecoin"] {
     section[data-name="yourfavoritecoin"] div[data-name="ourmission"] p {
       line-height: 1.8;
       font-size: 0.95rem;
-      margin: 0 0 2rem 0; }
+      margin: 0 auto 2rem auto; }
+      @media (max-width: 40em) {
+        section[data-name="yourfavoritecoin"] div[data-name="ourmission"] p {
+          font-size: 0.9rem;
+          width: 95%; } }
     section[data-name="yourfavoritecoin"] div[data-name="ourmission"] .button {
       color: #28FF00;
       border: 0.1rem solid #28FF00;
