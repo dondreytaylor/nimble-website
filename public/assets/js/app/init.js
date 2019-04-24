@@ -7,7 +7,7 @@ angular.module('Application', [
 config(['$locationProvider', '$interpolateProvider', '$routeProvider', function($locationProvider, $interpolateProvider, $routeProvider) {
 
     // URL prefix
-    $locationProvider.hashPrefix('!');
+    $locationProvider.html5Mode(true);
 
     // Change angular interpolate symbols to prevent
     // clash with template engine
@@ -18,5 +18,23 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
     $routeProvider
       .when("/", {
           templateUrl : "/static/views/pages/landing.html"
-      });
+      })
+      .when("/faq", {
+          templateUrl : "/static/views/pages/faq.html"
+      })
+      .when("/support", {
+          templateUrl : "/static/views/pages/support.html"
+      })
+      .when("/coinrequest", {
+          templateUrl : "/static/views/pages/coinrequest.html"
+      })
+      .when("/reserve", {
+          templateUrl : "/static/views/pages/reserve.html"
+      })
+      .when("/checkstatus", {
+          templateUrl : "/static/views/pages/checkstatus.html"
+      })
+      .when("/store", {
+          templateUrl : "/static/views/pages/item.html"
+      })
 }]);

@@ -1,0 +1,31 @@
+<!-- HEADER -->
+<div ng-include="'/static/views/includes/header.html'"></div>
+
+
+<main ng-controller="CheckStatusController">
+    <section data-name="title">
+        <h1>Check Order Status</h1>
+    </section>
+
+    <section data-name="body">
+        <div data-name="wrapper" ng-show="page == 1">
+            <p>Enter your order number below to view status.</p>
+            <div data-name="form">
+                <div data-name="fields">
+                    <div data-name="field">
+                        <input type="text" placeholder="(e.g. 1A33-F336-1836)">
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="button">VIEW STATUS</a>
+            </div>
+        </div>
+        <div data-name="holder" ng-show="page == 2">
+          <p>The status for order number <strong>1A33-F336-1836</strong> is: </p>
+          <span data-name="order-status">3 ORDERS AHEAD OF YOU</span>
+          <p class="center">Have questions? Feel free to <a href="/support">contact us</a>.</p>
+        </div>
+    </section>
+
+</main>
+
+<div ng-include="'/static/views/includes/footer.html'"></div>

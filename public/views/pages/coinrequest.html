@@ -1,0 +1,49 @@
+<!-- HEADER -->
+<div ng-include="'/static/views/includes/header.html'"></div>
+
+
+<main ng-controller="CoinRequestController">
+    <section data-name="title">
+        <h1 ng-show="page == 1">Coin Request</h1>
+        <h1 ng-show="page == 2">Coin Request Complete!</h1>
+    </section>
+
+    <section data-name="body">
+        <div data-name="wrapper" ng-show="page == 1">
+            <p>We love adding new coins and chains to nimbleNODE. At Nimble, we believe in equal opportunity to all projects, which means we do not look at exchange nor hashrate metrics.</p>
+            <p>All you have to do is fill out the following form, and we will do our best to add the coin/chain in an upcoming build.</p>
+            <div data-name="form">
+                <h3>Coin Details</h3>
+                <div data-name="fields">
+                    <div data-name="field">
+                        <label>COIN/CHAIN NAME</label>
+                        <input type="text">
+                    </div>
+                    <div data-name="field">
+                        <label>GITHUB</label>
+                        <input type="text">
+                    </div>
+                    <div data-name="field">
+                        <label>TWITTER</label>
+                        <input type="text">
+                    </div>
+                    <div data-name="field">
+                        <label>WEBSITE</label>
+                        <input type="text">
+                    </div>
+                    <div data-name="field">
+                        <label>WHAT IS THIS COIN OR CHAIN BASED ON?</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="button">SEND</a>
+            </div>
+        </div>
+        <div data-name="wrapper" ng-show="page == 2">
+          <p>Your coin request has been successfully submitted. To get this coin added quicker, please contact us at <a href="javascript:void(0);">contact@nimblenode.io</a> or in the <a href="javascript:void(0);">nimble telegram group</a> if you can assist with development support for this coin.</p>
+        </div>
+    </section>
+
+</main>
+
+<div ng-include="'/static/views/includes/footer.html'"></div>
