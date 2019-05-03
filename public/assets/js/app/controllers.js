@@ -19,10 +19,17 @@ angular.module('Application.controllers', [])
 
 .controller("ItemController", ["$scope", function($scope) {
     $scope.product = {
-        name: "nimbleNODE - lime green special edition",
+        name: "nimbleNODE",
+        subname: "lime green special edition",
         price: 99.49,
         sale: 0.1,
         special: "Get an additional 10% off when you pre-order between May 1st and June 1st.",
+        previews: [
+            "/static/assets/images/products/nimble-limegreen/1.png",
+            "/static/assets/images/products/nimble-limegreen/2.png",
+            "/static/assets/images/products/nimble-limegreen/3.png",
+            "/static/assets/images/products/nimble-limegreen/4.png",
+        ]
     };
     $scope.coins = [
         {preorder: true, name:"Bithereum"},
@@ -35,5 +42,9 @@ angular.module('Application.controllers', [])
     $scope.selection = {
       qty: "1",
       coin: $scope.coins[0]
-    }
+    };
+    $scope.mainpreview = $scope.product.previews[0];
+    $scope.setPreview = function(preview) {
+        $scope.mainpreview = preview;
+    };
 }])

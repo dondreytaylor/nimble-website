@@ -824,15 +824,163 @@ section[data-name="body"] {
     color: #21D000;
     margin: 0 auto 3rem auto; }
 
-section[data-name="product"] {
-  padding: 12rem 1rem 5rem 1rem;
-  min-height: 100vh; }
+section[data-name="item-options"] {
+  padding: 8rem 0;
+  max-width: 64em;
+  margin: 0 auto;
+  width: 90%;
+  white-space: nowrap; }
+  section[data-name="item-options"] div[data-name="information"] {
+    width: 50%;
+    float: left;
+    white-space: normal;
+    box-sizing: border-box;
+    padding: 0 5rem;
+    line-height: 1.2;
+    font-family: "HelveticaNeueThin"; }
+    section[data-name="item-options"] div[data-name="information"] h1[data-name="name"] {
+      font-size: 2.8rem;
+      margin: 0 0 0.3rem 0; }
+    section[data-name="item-options"] div[data-name="information"] span[data-name="subname"] {
+      font-size: 1.5rem;
+      margin: 0 0 3rem 0;
+      display: block;
+      font-family: "HelveticaNeueThin"; }
+    section[data-name="item-options"] div[data-name="information"] div[data-name="pricing"] {
+      margin: 0 0 2rem 0; }
+      section[data-name="item-options"] div[data-name="information"] div[data-name="pricing"] div[data-name="price"] {
+        font-size: 1.4rem;
+        display: inline-block; }
+        section[data-name="item-options"] div[data-name="information"] div[data-name="pricing"] div[data-name="price"]:nth-child(2) {
+          margin: 0 1rem;
+          color: #C1C1C1;
+          text-decoration: line-through; }
+    section[data-name="item-options"] div[data-name="information"] div[data-name="quantity"] {
+      margin: 0 0 1rem 0; }
+      section[data-name="item-options"] div[data-name="information"] div[data-name="quantity"] select {
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        background-color: #DADADA;
+        border: none;
+        -webkit-appearance: none; }
+    section[data-name="item-options"] div[data-name="information"] div[data-name="special"] {
+      margin: 1.5rem 0;
+      font-size: 0.85rem;
+      line-height: 1.5; }
+      section[data-name="item-options"] div[data-name="information"] div[data-name="special"] strong {
+        color: #FF6B6B; }
+    section[data-name="item-options"] div[data-name="information"] div[data-name="coin"] {
+      padding: 0 0 1rem 0;
+      border-bottom: 0.09rem solid #D8D8D8;
+      margin: 0 0 1.5rem 0; }
+      section[data-name="item-options"] div[data-name="information"] div[data-name="coin"] p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        max-width: 20rem;
+        margin: 0 0 1rem 0; }
+      section[data-name="item-options"] div[data-name="information"] div[data-name="coin"] select {
+        padding: 0.5rem 1rem;
+        border-radius: 0.3rem;
+        background-color: #DADADA;
+        border: none;
+        -webkit-appearance: none;
+        display: block;
+        box-sizing: border-box;
+        width: 100%; }
+      section[data-name="item-options"] div[data-name="information"] div[data-name="coin"] button {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0.7rem 1rem;
+        border-radius: 2rem;
+        margin: 1.5rem 0 1rem 0;
+        color: #FFFFFF;
+        border: none;
+        background-color: #21D000;
+        text-decoration: none;
+        text-align: center;
+        outline: none;
+        cursor: pointer; }
+        section[data-name="item-options"] div[data-name="information"] div[data-name="coin"] button:hover {
+          background-color: #1EB701; }
+    section[data-name="item-options"] div[data-name="information"] > p {
+      font-size: 0.9rem;
+      text-align: center;
+      display: block; }
+      section[data-name="item-options"] div[data-name="information"] > p a {
+        color: #21D000; }
+  section[data-name="item-options"] div[data-name="preview-holder"] {
+    width: 50%;
+    float: left;
+    white-space: normal; }
+    section[data-name="item-options"] div[data-name="preview-holder"] div[data-name="main"] {
+      width: 90%;
+      height: 25rem;
+      border: 0.1rem solid #21D000;
+      border-radius: 0.3rem;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    section[data-name="item-options"] div[data-name="preview-holder"] div[data-name="previews"] div[data-name="preview"] {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 6rem;
+      margin: 1rem 0.5rem;
+      height: 6rem;
+      display: inline-block;
+      overflow: hidden;
+      border: 0.1rem solid #21D000;
+      border-radius: 0.3rem;
+      cursor: pointer; }
+
+section[data-name="item-details"] {
+  max-width: 64em;
+  margin: 0 auto;
+  width: 90%;
+  padding: 5rem 3rem 5em 3rem;
+  clear: both; }
+  section[data-name="item-details"] h2 {
+    margin: 0 0 2rem 0; }
+  section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] {
+    white-space: nowrap;
+    margin: 0 0 2rem 0; }
+    section[data-name="item-details"] div[data-name="details"] div[data-name="detail"]:after {
+      content: "";
+      clear: both;
+      display: table; }
+    section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] div[data-name="left"] {
+      float: left;
+      width: 40%;
+      white-space: normal; }
+      section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] div[data-name="left"] span {
+        font-size: 1.3rem;
+        font-family: "HelveticaNeueLight"; }
+    section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] div[data-name="right"] {
+      float: left;
+      width: 60%;
+      white-space: normal; }
+      section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] div[data-name="right"] strong {
+        margin: 0 0 0.3rem 0;
+        display: block; }
+      section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] div[data-name="right"] p {
+        margin: 0 0 2rem 0;
+        font-size: 0.9rem;
+        line-height: 1.5; }
+      section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] div[data-name="right"] ul {
+        margin: 0;
+        padding: 0; }
+        section[data-name="item-details"] div[data-name="details"] div[data-name="detail"] div[data-name="right"] ul li {
+          list-style: none;
+          font-size: 0.9rem;
+          margin: 0 0 1.5rem 0; }
 
 footer {
   width: 100%;
   min-height: 30rem;
   background-color: #28FF00;
-  padding: 3rem 1rem; }
+  padding: 3rem 1rem;
+  clear: both; }
   footer h3 {
     font-size: 2.1rem;
     display: block;

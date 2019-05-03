@@ -3,9 +3,10 @@
 
 
 <main ng-controller="ItemController">
-    <section data-name="product">
+    <section data-name="item-options">
         <div data-name="information">
-            <h1>{{product.name}}</h1>
+            <h1 data-name="name">{{product.name}}</h1>
+            <span data-name="subname">{{product.subname}}</span>
             <div data-name="pricing">
                 <div data-name="price" ng-if="product.sale && product.sale <= 1 && product.sale > 0">${{product.price - (product.price * product.sale)}}</div>
                 <div data-name="price">${{product.price}}</div>
@@ -25,8 +26,11 @@
                     <option value="10">10</option>
                 </select>
             </div>
+            <div data-name="special" ng-if="product.special">
+                <p><strong>Special Offer - </strong>{{product.special}}</p>
+            </div>
             <div data-name="coin">
-                <p>Your device will come pre-loaded with a supported coin of your choice.</p>
+                <p>Your device will come pre-loaded with a supported coin of your choice. Please choose a supported coin for you node.</p>
                 <select ng-model="selection.coin">
                     <option ng-value="coin" ng-repeat="coin in coins">{{coin.name}}</option>
                 </select>
@@ -35,15 +39,13 @@
             <p>Need some help? <a href="/support" target="_blank">Contact Us</a></p>
         </div>
         <div data-name="preview-holder">
-            <div data-name="main"></div>
+            <div data-name="main" ng-style="{'background-image': 'url('+mainpreview+')'}"></div>
             <div data-name="previews"">
-                <div data-name="preview">
-                      <div data-name="preview"></div>
-                </div>
+                <div ng-click="setPreview(preview)" ng-repeat="preview in product.previews" data-name="preview" ng-style="{'background-image': 'url('+preview+')'}"></div>
             </div>
         </div>
     </section>
-    <section data-name="details">
+    <section data-name="item-details">
         <h2>Product Information</h2>
         <div data-name="details">
             <div data-name="detail">
@@ -52,13 +54,51 @@
                 </div>
                 <div data-name="right">
                     <strong>Portable enough to fit in your pocket </strong>
-                    <p>nimbleNODE packages a complete full node experience into a sleek device that is portable and lightweight enough to be taken anywhere.  At a size of just 1” x 2.1” and a weight of around 11.8 grams, there is no place nimbleNODE can’t go.</p>
+                    <p>nimbleNODE packages a complete full node experience into a sleek device, portable enough to be taken anywhere.  At a size of just 1” x 2.1” and a weight of around 11.8 grams, there is no place nimbleNODE can’t go.</p>
                     <strong>Customized for your coin</strong>
                     <p>With current support for BTC, ETH, and BTH, the nimbleNODE software was built with flexibility and adaptability in mind. Simply choose a supported coin you would like preloaded on your nimbleNODE on purchase and you’re ready to go.</p>
                     <strong>Easy setup</strong>
                     <p>Most nodes setups are overly technical and assume that every understands of blockchains, which for most, is simply not the case. Wth nimbleNODE, setup is as easy as powering up and using a mobile app.</p>
                     <strong>Built for efficiency</strong>
                     <p>Unlike miners and other nodes, nimbleNODE consumes as little as 1 Watt of power and is quiet enough to hear a pin drop. Optomized for efficient heat dissipation, nimbleNODE is as cool as they come.</p>
+                </div>
+            </div>
+            <div data-name="detail">
+                <div data-name="left">
+                    <span>Key Highlights</span>
+                </div>
+                <div data-name="right">
+                    <ul>
+                        <li>Small, lightweight, and easy to bring with you anywhere.</li>
+                        <li>Customized for the supported coin of your choice.</li>
+                        <li>Low energy footprint with power consumption at as little as 1 Watt.</li>
+                        <li>Controllable through a single mobile application.</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-name="detail">
+                <div data-name="left">
+                    <span>Included in the box</span>
+                </div>
+                <div data-name="right">
+                    <ul>
+                        <li>USB 5 Volt power adapter</li>
+                        <li>nimbleNODE device</li>
+                        <li>SD-Card for expandable storage</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-name="detail">
+                <div data-name="left">
+                    <span>Technical Specs</span>
+                </div>
+                <div data-name="right">
+                    <ul>
+                        <li>Dimensions: 1” Width x 2.1” Height</li>
+                        <li>Weight: 11.8 grams</li>
+                        <li>Capabilities: Bluetooth, Wireless</li>
+                        <li>ARM6 Chip</li>
+                    </ul>
                 </div>
             </div>
         </div>
