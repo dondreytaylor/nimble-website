@@ -9,11 +9,6 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
     // URL prefix
     $locationProvider.html5Mode(true);
 
-    // Change angular interpolate symbols to prevent
-    // clash with template engine
-    $interpolateProvider.startSymbol('[[');
-    $interpolateProvider.startSymbol(']]');
-
     // Application routing
     $routeProvider
       .when("/", {

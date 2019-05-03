@@ -4,6 +4,64 @@
 
 <main ng-controller="ItemController">
     <section data-name="product">
+        <div data-name="information">
+            <h1>{{product.name}}</h1>
+            <div data-name="pricing">
+                <div data-name="price" ng-if="product.sale && product.sale <= 1 && product.sale > 0">${{product.price - (product.price * product.sale)}}</div>
+                <div data-name="price">${{product.price}}</div>
+            </div>
+            <div data-name="quantity">
+                <strong>Quantity</strong>
+                <select ng-model="selection.qty">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            <div data-name="coin">
+                <p>Your device will come pre-loaded with a supported coin of your choice.</p>
+                <select ng-model="selection.coin">
+                    <option ng-value="coin" ng-repeat="coin in coins">{{coin.name}}</option>
+                </select>
+                <button>{{selection.coin.preorder ? "PRE-ORDER NOW" : "RESERVE NOW"}}</button>
+            </div>
+            <p>Need some help? <a href="/support" target="_blank">Contact Us</a></p>
+        </div>
+        <div data-name="preview-holder">
+            <div data-name="main"></div>
+            <div data-name="previews"">
+                <div data-name="preview">
+                      <div data-name="preview"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section data-name="details">
+        <h2>Product Information</h2>
+        <div data-name="details">
+            <div data-name="detail">
+                <div data-name="left">
+                    <span>Overview</span>
+                </div>
+                <div data-name="right">
+                    <strong>Portable enough to fit in your pocket </strong>
+                    <p>nimbleNODE packages a complete full node experience into a sleek device that is portable and lightweight enough to be taken anywhere.  At a size of just 1” x 2.1” and a weight of around 11.8 grams, there is no place nimbleNODE can’t go.</p>
+                    <strong>Customized for your coin</strong>
+                    <p>With current support for BTC, ETH, and BTH, the nimbleNODE software was built with flexibility and adaptability in mind. Simply choose a supported coin you would like preloaded on your nimbleNODE on purchase and you’re ready to go.</p>
+                    <strong>Easy setup</strong>
+                    <p>Most nodes setups are overly technical and assume that every understands of blockchains, which for most, is simply not the case. Wth nimbleNODE, setup is as easy as powering up and using a mobile app.</p>
+                    <strong>Built for efficiency</strong>
+                    <p>Unlike miners and other nodes, nimbleNODE consumes as little as 1 Watt of power and is quiet enough to hear a pin drop. Optomized for efficient heat dissipation, nimbleNODE is as cool as they come.</p>
+                </div>
+            </div>
+        </div>
     </section>
 </main>
 
