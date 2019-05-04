@@ -1027,11 +1027,15 @@ section[data-name="body"] {
 }
 
 section[data-name="item-options"] {
-  padding: 8rem 0;
+  padding: 10rem 0 3rem 0;
   max-width: $tablet;
   margin: 0 auto;
   width: 90%;
   white-space: nowrap;
+  @media (max-width: $tablet) {
+      padding: 12rem 0 3rem 0;
+      max-width: 35rem;
+  }
 
   div[data-name="information"] {
       width: 50%;
@@ -1041,6 +1045,12 @@ section[data-name="item-options"] {
       padding: 0 5rem;
       line-height: 1.2;
       font-family: "HelveticaNeueThin";
+      @media (max-width: $tablet) {
+          float: none;
+          width: 100%;
+          display: block;
+          padding: 0 1rem;
+      }
       h1[data-name="name"] {
         font-size: 2.8rem;
         margin: 0 0 0.3rem 0;
@@ -1088,7 +1098,6 @@ section[data-name="item-options"] {
           p {
             font-size: 0.85rem;
             line-height: 1.5;
-            max-width: 20rem;
             margin: 0 0 1rem 0;
           }
           select {
@@ -1124,18 +1133,26 @@ section[data-name="item-options"] {
         font-size: 0.9rem;
         text-align: center;
         display: block;
+        margin: 0 0 2rem 0;
         a {
           color: #21D000;
         }
       }
   }
+
   div[data-name="preview-holder"] {
       width: 50%;
       float: left;
       white-space: normal;
+      @media (max-width: $tablet) {
+          float: none;
+          width: 100%;
+          display: block;
+      }
       div[data-name="main"] {
           width: 90%;
           height: 25rem;
+          margin: 0 auto;
           border: 0.1rem solid #21D000;
           border-radius: 0.3rem;
           background-position: center center;
@@ -1143,6 +1160,7 @@ section[data-name="item-options"] {
           background-size: cover;
       }
       div[data-name="previews"] {
+          text-align: center;
           div[data-name="preview"] {
             background-position: center center;
             background-repeat: no-repeat;
@@ -1166,8 +1184,12 @@ section[data-name="item-details"] {
   width: 90%;
   padding: 5rem 3rem 5em 3rem;
   clear: both;
+  @media (max-width: $tablet) {
+    padding: 5rem 0.5rem 5em 0.5rem;
+  }
   h2 {
     margin: 0 0 2rem 0;
+    font-family: "HelveticaNeueBold";
   }
   div[data-name="details"] {
     div[data-name="detail"] {
@@ -1182,23 +1204,37 @@ section[data-name="item-details"] {
             float: left;
             width: 40%;
             white-space: normal;
+            @media (max-width: $tablet) {
+                float: none;
+                width: 100%;
+                display: block;
+            }
             span {
               font-size: 1.3rem;
               font-family: "HelveticaNeueLight";
+              margin: 0 0 1rem 0;
+              display: block;
             }
         }
         div[data-name="right"] {
             float: left;
             width: 60%;
             white-space: normal;
+            @media (max-width: $tablet) {
+                float: none;
+                width: 100%;
+                display: block;
+            }
             strong {
               margin: 0 0 0.3rem 0;
               display: block;
+              font-size: 1rem;
+              font-family: "HelveticaNeueMedium";
             }
             p {
-              margin: 0 0 2rem 0;
+              margin: 0 0 3rem 0;
               font-size: 0.9rem;
-              line-height: 1.5;
+              line-height: 1.8;
             }
             ul {
               margin: 0;
@@ -1207,6 +1243,7 @@ section[data-name="item-details"] {
                 list-style: none;
                 font-size: 0.9rem;
                 margin: 0 0 1.5rem 0;
+                line-height: 1.5;
               }
             }
         }

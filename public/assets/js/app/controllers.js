@@ -21,7 +21,7 @@ angular.module('Application.controllers', [])
     $scope.product = {
         name: "nimbleNODE",
         subname: "lime green special edition",
-        price: 99.49,
+        price: 100,
         sale: 0.1,
         special: "Get an additional 10% off when you pre-order between May 1st and June 1st.",
         previews: [
