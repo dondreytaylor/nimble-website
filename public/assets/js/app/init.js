@@ -32,4 +32,16 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
       .when("/store", {
           templateUrl : "/static/views/pages/item.html"
       })
+      .when("/legal", {
+          templateUrl : "/static/views/pages/legal.html"
+      })
+      .when("/returns", {
+          templateUrl : "/static/views/pages/doc-returns.html"
+      })
+      .when("/terms", {
+          templateUrl : "/static/views/pages/doc-terms.html"
+      })
+      .when("/privacy", {
+          templateUrl : "/static/views/pages/doc-privacy.html"
+      })
 }]);

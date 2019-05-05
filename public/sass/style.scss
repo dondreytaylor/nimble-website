@@ -203,11 +203,12 @@ section[data-name="introduction"] {
               }
               small {
                 color: #FFFFFF;
+                font-size: 0.85rem;
               }
               a {
                   display: block;
-                  max-width: 10rem;
-                  padding: 0.7rem 1rem;
+                  max-width: 14rem;
+                  padding: 1rem;
                   border-radius: 2rem;
                   margin: 2rem 0 2rem 0;
                   color: #000000;
@@ -215,6 +216,7 @@ section[data-name="introduction"] {
                   background-color: #28FF00;
                   text-decoration: none;
                   text-align: center;
+                  font-family: "HelveticaNeueMedium";
                   &:hover {
                     background-color: #21D000;
                   }
@@ -934,6 +936,35 @@ section[data-name="body"] {
         }
     }
 
+    div[data-name="legal"] {
+        text-align: center;
+        margin: 0 0 15rem 0;
+        a[data-name="option"] {
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: #21AE07;
+            padding: 3rem 1rem;
+            display: inline-block;
+            text-align: center;
+            max-width: 15rem;
+            width: 95%;
+            margin: 1rem;
+            text-align: center;
+            border-radius: 0.5rem;
+            i {
+              display: block;
+              font-size: 3.5rem;
+              margin: 0 0 1rem 0;
+              color: #FFFFFF;
+            }
+            span {
+              font-size: 0.95rem;
+              color: #FFFFFF;
+              font-family: "HelveticaNeueMedium";
+            }
+        }
+    }
+
     div[data-name="order"] {
         strong {
             display: block;
@@ -1100,6 +1131,12 @@ section[data-name="item-options"] {
             line-height: 1.5;
             margin: 0 0 1rem 0;
           }
+          small {
+            text-align: center;
+            display: block;
+            margin: 0 0 1rem 0;
+            color: #666666;
+          }
           select {
             padding: 0.5rem 1rem;
             border-radius: 0.3rem;
@@ -1129,6 +1166,7 @@ section[data-name="item-options"] {
             }
           }
       }
+
       & > p {
         font-size: 0.9rem;
         text-align: center;
