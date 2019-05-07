@@ -115,19 +115,6 @@ angular.module('Application.controllers', [])
 
 .controller("ItemController", ["$scope", "Coins", "$location", "$routeParams", function($scope, Coins, $location, $routeParams) {
 
-    $scope.product = {
-        name: "nimbleNODE",
-        subname: "lime green special edition",
-        price: 99,
-        sale: 0.101,
-        special: "Get an additional 10% off when you pre-order between May 1st and June 14th.",
-        previews: [
-            "/static/assets/images/products/nimble-limegreen/1.png",
-            "/static/assets/images/products/nimble-limegreen/2.png",
-            "/static/assets/images/products/nimble-limegreen/3.png",
-            "/static/assets/images/products/nimble-limegreen/4.png",
-        ]
-    };
 
     $scope.coin = Coins.supported.filter(function(coin) {
         return coin.name == $routeParams.coin;
@@ -136,7 +123,22 @@ angular.module('Application.controllers', [])
 
     if (!$scope.coin) {
         $location.path("/store");
+        return;
     }
+
+    $scope.product = {
+        name: "nimbleNODE",
+        subname: "lime green special edition",
+        price: 99,
+        sale: 0.101,
+        special: "Get an additional 10% off when you "+ ($scope.coin.preorder ? "pre-order between May 1st and June 14th." : "join the waitlist."),
+        previews: [
+            "/static/assets/images/products/nimble-limegreen/1.png",
+            "/static/assets/images/products/nimble-limegreen/2.png",
+            "/static/assets/images/products/nimble-limegreen/3.png",
+            "/static/assets/images/products/nimble-limegreen/4.png",
+        ]
+    };
 
     $scope.coins = Coins.supported;
     $scope.selection = {
