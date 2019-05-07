@@ -5,11 +5,12 @@
 <main ng-controller="ItemController">
     <section data-name="item-options">
         <div data-name="information">
+            <div data-name="badge" ng-style="{'background-image': 'url(/static/assets/images/store/coin-'+coin.shortname+'.png)'}"></div>
             <h1 data-name="name">{{product.name}}</h1>
             <span data-name="subname">{{product.subname}}</span>
             <div data-name="pricing">
-                <div data-name="price" ng-if="product.sale && product.sale <= 1 && product.sale > 0">${{product.price - (product.price * product.sale)}}</div>
-                <div data-name="price">${{product.price}}</div>
+                <div data-name="price" ng-if="product.sale && product.sale <= 1 && product.sale > 0">${{(product.price - (product.price * product.sale)).toFixed(2)}}</div>
+                <div data-name="price">${{product.price.toFixed(2)}}</div>
             </div>
             <div data-name="quantity">
                 <strong>Quantity</strong>
@@ -30,11 +31,11 @@
                 <p><strong>Special Offer - </strong>{{product.special}}</p>
             </div>
             <div data-name="coin">
-                <p>Your device will come pre-loaded with a supported blockchain of your choice. Please choose a supported blockchain for your node.</p>
-                <select ng-model="selection.coin">
+                <p>Your device will come pre-loaded with:</p>
+                <select ng-model="selection.coin" disabled>
                     <option ng-value="coin" ng-repeat="coin in coins">{{coin.name}}</option>
                 </select>
-                <button ng-click="continue()">{{selection.coin.preorder ? "PRE-ORDER NOW" : "RESERVE NOW"}}</button>
+                <button ng-click="continue()">{{selection.coin.preorder ? "PRE-ORDER NOW" : "JOIN WAITLIST"}}</button>
                 <small>No deposit or pre-payment needed</small>
             </div>
             <p>Need some help? <a href="/support" target="_blank">Contact Us</a></p>
@@ -57,7 +58,7 @@
                     <strong>Portable enough to fit in your pocket </strong>
                     <p>nimbleNODE packages a complete full node experience into a sleek device, portable enough to be taken anywhere.  At a size of just 1” x 2.1” and a weight of around 11.8 grams, there is no place nimbleNODE can’t go.</p>
                     <strong>Customized for your coin</strong>
-                    <p>With current support for BTC, ETH, and BTH, the nimbleNODE software was built with flexibility and adaptability in mind. Simply choose a supported coin you would like preloaded on your nimbleNODE on purchase and you’re ready to go.</p>
+                    <p>nimbleNODE software was built with flexibility and adaptability in mind. Simply choose a supported coin you would like preloaded on your nimbleNODE on purchase and you’re ready to go.</p>
                     <strong>Easy setup</strong>
                     <p>Most nodes setups are overly technical and assume that every understands of blockchains, which for most, is simply not the case. Wth nimbleNODE, setup is as easy as powering up and using a mobile app.</p>
                     <strong>Built for efficiency</strong>
@@ -70,10 +71,17 @@
                 </div>
                 <div data-name="right">
                     <ul>
-                        <li>Small, lightweight, and easy to bring with you anywhere.</li>
-                        <li>Customized for the supported coin of your choice.</li>
-                        <li>Low energy footprint with power consumption at as little as 1 Watt.</li>
-                        <li>Controllable through a single mobile application.</li>
+                        <li ng-repeat="highlight in coin.highlights">{{highlight}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-name="detail" ng-show="coin.comingsoon.length > 0">
+                <div data-name="left">
+                    <span>Coming Soon via App Updates</span>
+                </div>
+                <div data-name="right">
+                    <ul>
+                        <li ng-repeat="comingsoon in coin.comingsoon">{{comingsoon}}</li>
                     </ul>
                 </div>
             </div>

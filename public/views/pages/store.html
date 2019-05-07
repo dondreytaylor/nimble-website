@@ -1,0 +1,21 @@
+<!-- HEADER -->
+<div class="dark" ng-include="'/static/views/includes/header.html'"></div>
+
+
+<main ng-controller="StoreController">
+    <section data-name="store-items">
+        <h1>nimble<strong>STORE</strong></h1>
+        <p>Each nimbleNODE comes pre-loaded with a compatible blockchain. Select one of your choice!</p>
+        <div data-name="items">
+            <a ng-href="/product/{{coin.name}}" data-name="item" ng-repeat="coin in coins">
+                <div data-name="badge" ng-style="{'background-image': 'url(/static/assets/images/store/coin-'+coin.shortname+'.png)'}"></div>
+                <div data-name="preview"></div>
+                <strong ng-bind="coin.name"></strong>
+                <small ng-show="!coin.preorder">JOIN WAITLIST</small>
+                <small ng-show="coin.preorder">PRE-ORDER NOW</small>
+            </a>
+        </div>
+    </section>
+</main>
+
+<div ng-include="'/static/views/includes/footer.html'"></div>

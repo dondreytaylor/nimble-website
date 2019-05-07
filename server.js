@@ -48,8 +48,6 @@ let sendORDERConfirmationEmail = function(email, ordernumber, invitecode) {
 let sendORDERTOADMINS = function(form) {
 		var data = form || {}
 		data.coinname = form["coin[name]"];
-		console.log(form);
-		console.log(data);
 
 		var message = {
 				from: Config.SendGrid.from,

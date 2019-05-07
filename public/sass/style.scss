@@ -988,7 +988,7 @@ section[data-name="body"] {
             p {
               font-size: 0.9rem;
               line-height: 1.8;
-              margin: 0;
+              margin: 0 0 1rem 0;
             }
         }
     }
@@ -1173,6 +1173,15 @@ section[data-name="item-options"] {
           display: block;
           padding: 0 1rem;
       }
+
+      div[data-name="badge"] {
+          width: 5rem;
+          height: 5rem;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          margin: 0 0 1rem 0;
+      }
       h1[data-name="name"] {
         font-size: 2.8rem;
         margin: 0 0 0.3rem 0;
@@ -1220,7 +1229,7 @@ section[data-name="item-options"] {
           p {
             font-size: 0.85rem;
             line-height: 1.5;
-            margin: 0 0 1rem 0;
+            margin: 0 0 0.3rem 0;
           }
           small {
             text-align: center;
@@ -1343,6 +1352,7 @@ section[data-name="item-details"] {
               font-family: "HelveticaNeueLight";
               margin: 0 0 1rem 0;
               display: block;
+              line-height: 1.5;
             }
         }
         div[data-name="right"] {
@@ -1378,6 +1388,78 @@ section[data-name="item-details"] {
         }
     }
   }
+}
+
+section[data-name="store-items"] {
+    max-width: $tablet;
+    margin: 0 auto;
+    width: 90%;
+    padding: 9rem 3rem 10rem 3rem;
+    clear: both;
+    text-align: center;
+    @media (max-width: $tablet) {
+        padding: 10rem 0.5rem 5em 0.5rem;
+    }
+
+    h1 {
+        font-size: 2.6rem;
+        margin: 0 0 0.8rem 0;
+        font-family: "HelveticaNeueThin";
+    }
+
+    p {
+      margin: 0 0 3.5rem 0;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    div[data-name="items"] {
+        text-align: center;
+        a[data-name="item"] {
+            display: inline-block;
+            text-decoration: none;
+            margin: 0 2rem 3rem 2rem;
+            color: #000000;
+            font-family: "HelveticaNeueRegular";
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            position: relative;
+            @media (min-width: $tablet) {
+                &:hover {
+                  opacity: 0.9;
+                  transform: scale(1.1,1.1);
+                }
+            }
+            small {
+              font-size: 0.65rem;
+              display: block;
+              text-align: center;
+              margin: 0.2rem 0;
+              color: #666666;
+            }
+            div[data-name="badge"] {
+                width: 4rem;
+                height: 4rem;
+                position: absolute;
+                top: -1rem;
+                left: -1rem;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            div[data-name="preview"] {
+                width: 15rem;
+                height: 12rem;
+                border-radius: 0.5rem;
+                border: 0.1rem solid #21D000;
+                margin: 0 0 0.5rem 0;
+                background-image: url(/static/assets/images/store/nimble-product.png);
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
 }
 
 main[ng-controller="CheckStatusController"] {

@@ -9,6 +9,9 @@ angular.module('Application.controllers', [])
     }
 }])
 
+.controller("StoreController", ["$scope", "$routeParams", function($scope, $routeParams) {
+}])
+
 .controller("CoinRequestController", ["$scope", "$anchorScroll", function($scope, $anchorScroll) {
     $scope.page = 1;
     $scope.form = {};
@@ -53,9 +56,9 @@ angular.module('Application.controllers', [])
             $scope.form.email &&
             $scope.form.country &&
             $scope.form.state &&
-            $scope.form.city &&
-            $scope.form.street &&
-            $scope.form.zipcode &&
+            (!$scope.form.coin.preorder || $scope.form.city) &&
+            (!$scope.form.coin.preorder || $scope.form.street) &&
+            (!$scope.form.coin.preorder || $scope.form.zipcode) &&
             $scope.form.found_out_about_nimble &&
             $scope.form.referred_by &&
             $scope.form.questions_about_nimble
@@ -110,13 +113,14 @@ angular.module('Application.controllers', [])
     });
 }])
 
-.controller("ItemController", ["$scope", "Coins", "$location", function($scope, Coins, $location) {
+.controller("ItemController", ["$scope", "Coins", "$location", "$routeParams", function($scope, Coins, $location, $routeParams) {
+
     $scope.product = {
         name: "nimbleNODE",
         subname: "lime green special edition",
-        price: 100,
-        sale: 0.1,
-        special: "Get an additional 10% off when you pre-order between May 1st and June 1st.",
+        price: 99,
+        sale: 0.101,
+        special: "Get an additional 10% off when you pre-order between May 1st and June 14th.",
         previews: [
             "/static/assets/images/products/nimble-limegreen/1.png",
             "/static/assets/images/products/nimble-limegreen/2.png",
@@ -124,10 +128,20 @@ angular.module('Application.controllers', [])
             "/static/assets/images/products/nimble-limegreen/4.png",
         ]
     };
+
+    $scope.coin = Coins.supported.filter(function(coin) {
+        return coin.name == $routeParams.coin;
+    })[0];
+
+
+    if (!$scope.coin) {
+        $location.path("/store");
+    }
+
     $scope.coins = Coins.supported;
     $scope.selection = {
       qty: "1",
-      coin: $scope.coins[0]
+      coin: $scope.coin
     };
     $scope.mainpreview = $scope.product.previews[0];
     $scope.setPreview = function(preview) {
@@ -136,4 +150,8 @@ angular.module('Application.controllers', [])
     $scope.continue = function() {
         $location.path("reserve").search({coin:$scope.selection.coin.name, qty:$scope.selection.qty});
     };
+}])
+
+.controller("StoreController", ["$scope", "$location", "Coins", function($scope, $location, Coins) {
+      $scope.coins = Coins.supported;
 }])

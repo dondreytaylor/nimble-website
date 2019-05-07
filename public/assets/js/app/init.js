@@ -34,6 +34,9 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
           templateUrl : "/static/views/pages/checkstatus.html"
       })
       .when("/store", {
+          templateUrl : "/static/views/pages/store.html"
+      })
+      .when("/product/:coin", {
           templateUrl : "/static/views/pages/item.html"
       })
       .when("/legal", {
