@@ -48,4 +48,5 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
       .when("/privacy", {
           templateUrl : "/static/views/pages/doc-privacy.html"
       })
+      .otherwise("/");
 }]);
