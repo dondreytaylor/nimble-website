@@ -161,7 +161,7 @@ var initialization = async function() {
 					form.referralcode = (getAlphaString(8)).toUpperCase();
 					db.collection("Reserves").insert(form)
 					sendORDERConfirmationEmail(form.email, form.ordernumber, form.referralcode);
-					// sendORDERTOADMINS(form);
+					sendORDERTOADMINS(form);
 					return {success:true, ordernumber:form.ordernumber, referralcode:form.referralcode};
 			}
 	});
