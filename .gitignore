@@ -1,5 +1,6 @@
 .DS_Store
 .sass-cache
+config/default.json
 
 # Logs
 logs

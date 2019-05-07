@@ -2,22 +2,115 @@
 
 angular.module('Application.controllers', [])
 
-.controller("LandingController", ["$scope", function($scope) {
+.controller("LandingController", ["$scope", "$routeParams", function($scope, $routeParams) {
+    let code = ($routeParams.code || "").toUpperCase();
+    if (code && typeof localStorage === "object") {
+        localStorage.setItem("referrer", code);
+    }
 }])
 
-.controller("CoinRequestController", ["$scope", function($scope) {
+.controller("CoinRequestController", ["$scope", "$anchorScroll", function($scope, $anchorScroll) {
     $scope.page = 1;
+    $scope.form = {};
+    $scope.isValid = function() {
+        return (
+            $scope.form.chain &&
+            $scope.form.github &&
+            $scope.form.twitter &&
+            $scope.form.website &&
+            $scope.form.based &&
+            $scope.form.contact_name &&
+            $scope.form.contact_email &&
+            $scope.form.contact_support
+        );
+    };
+    $scope.send = function() {
+        $scope.page = 2;
+        $.post("/api/coinrequest", $scope.form);
+        $anchorScroll();
+    };
 }])
 
-.controller("ReserveController", ["$scope", function($scope) {
+.controller("ReserveController", ["$scope", "Coins", "$routeParams", "$location", "$anchorScroll", "$rootScope", "$timeout", function($scope, Coins, $routeParams, $location, $anchorScroll, $rootScope, $timeout) {
     $scope.page = 1;
+    $scope.form = {};
+    $scope.coin = Coins.supported.filter(function(coin) {
+        return coin.name == $routeParams.coin;
+    })[0];
+
+    if (!$scope.coin || !$routeParams.qty || !($routeParams.qty > 0)) {
+        $location.path("store");
+    }
+
+    $scope.form.coin = $scope.coin;
+    $scope.form.qty = $scope.qty;
+    $scope.form.referrer = (typeof localStorage === "object") ? (localStorage.getItem("referrer") | "") : "";
+
+    $scope.isValid = function() {
+        return (
+            $scope.form.firstname &&
+            $scope.form.lastname &&
+            $scope.form.email &&
+            $scope.form.country &&
+            $scope.form.state &&
+            $scope.form.city &&
+            $scope.form.street &&
+            $scope.form.zipcode &&
+            $scope.form.found_out_about_nimble &&
+            $scope.form.referred_by &&
+            $scope.form.questions_about_nimble
+        );
+    };
+    $scope.send = function() {
+        $rootScope.isLoadingIndicatorShown = true;
+        $rootScope.LoadingIndicatorText = "Processing Order"
+        $.post("/api/reserve", JSON.parse(angular.toJson($scope.form))).then(function(data) {
+              $timeout(function() {
+                  $scope.page = 2;
+                  $rootScope.isLoadingIndicatorShown = false;
+                  $scope.ordernumber = data.ordernumber;
+                  $scope.referralcode = data.referralcode;
+              });
+        });
+        $anchorScroll();
+    };
 }])
 
-.controller("CheckStatusController", ["$scope", function($scope) {
-    $scope.page = 2;
+.controller("CheckStatusController", ["$scope", "$rootScope", "$timeout", function($scope, $rootScope, $timeout) {
+    $scope.page = 1;
+    $scope.form = {};
+    $scope.status = "";
+    $scope.isInvalidOrderNumber = false;
+    $scope.checkStatus = function() {
+        $rootScope.isLoadingIndicatorShown = true;
+        $rootScope.LoadingIndicatorText = "Searching for order"
+        $.post("/api/checkstatus", $scope.form).then(function(data) {
+              $timeout(function() {
+                    $rootScope.isLoadingIndicatorShown = false;
+                    $scope.isInvalidOrderNumber = false;
+                    if (data.status) {
+                        $scope.status = data.status;
+                    }
+                    else if (data.ordersAhead == 0) {
+                        $scope.status = "YOUR ORDER IS NEXT TO BE PROCESSED";
+                    }
+                    else if (data.ordersAhead > 0) {
+                        $scope.status = data.ordersAhead + " ORDER"+(data.ordersAhead != 1 ? "S" : "")+" AHEAD OF YOU";
+                    }
+                    else {
+                        $scope.isInvalidOrderNumber = true;
+                        return;
+                   }
+                   $scope.page = 2;
+              });
+        });
+    };
+    $scope.$watch("form.ordernumber", function() {
+        if ($scope.isInvalidOrderNumber) $scope.isInvalidOrderNumber = false;
+    });
 }])
 
-.controller("ItemController", ["$scope", function($scope) {
+.controller("ItemController", ["$scope", "Coins", "$location", function($scope, Coins, $location) {
     $scope.product = {
         name: "nimbleNODE",
         subname: "lime green special edition",
@@ -31,14 +124,7 @@ angular.module('Application.controllers', [])
             "/static/assets/images/products/nimble-limegreen/4.png",
         ]
     };
-    $scope.coins = [
-        {preorder: true, name:"Bithereum"},
-        {preorder: false, name:"Ethereum"},
-        {preorder: false, name:"Bitcoin"},
-        {preorder: false, name:"Bitcoin Cash"},
-        {preorder: false, name:"Bitcoin SV"},
-        {preorder: false, name:"TRON"}
-    ];
+    $scope.coins = Coins.supported;
     $scope.selection = {
       qty: "1",
       coin: $scope.coins[0]
@@ -46,5 +132,8 @@ angular.module('Application.controllers', [])
     $scope.mainpreview = $scope.product.previews[0];
     $scope.setPreview = function(preview) {
         $scope.mainpreview = preview;
+    };
+    $scope.continue = function() {
+        $location.path("reserve").search({coin:$scope.selection.coin.name, qty:$scope.selection.qty});
     };
 }])

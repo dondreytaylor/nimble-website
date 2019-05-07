@@ -34,7 +34,7 @@
                 <select ng-model="selection.coin">
                     <option ng-value="coin" ng-repeat="coin in coins">{{coin.name}}</option>
                 </select>
-                <button>{{selection.coin.preorder ? "PRE-ORDER NOW" : "RESERVE NOW"}}</button>
+                <button ng-click="continue()">{{selection.coin.preorder ? "PRE-ORDER NOW" : "RESERVE NOW"}}</button>
                 <small>No deposit or pre-payment needed</small>
             </div>
             <p>Need some help? <a href="/support" target="_blank">Contact Us</a></p>

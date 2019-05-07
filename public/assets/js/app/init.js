@@ -2,7 +2,8 @@
 
 angular.module('Application', [
   'ngRoute',
-  'Application.controllers'
+  'Application.controllers',
+  'Application.factory'
 ]).
 config(['$locationProvider', '$interpolateProvider', '$routeProvider', function($locationProvider, $interpolateProvider, $routeProvider) {
 
@@ -12,6 +13,9 @@ config(['$locationProvider', '$interpolateProvider', '$routeProvider', function(
     // Application routing
     $routeProvider
       .when("/", {
+          templateUrl : "/static/views/pages/landing.html"
+      })
+      .when("/invite/:code", {
           templateUrl : "/static/views/pages/landing.html"
       })
       .when("/faq", {

@@ -4,34 +4,36 @@
 
 <main ng-controller="ReserveController">
     <section data-name="title">
-        <h1 ng-show="page == 1">Reserve nimble<strong>NODE</strong></h1>
-        <h1 ng-show="page == 2">Reservation Complete!</h1>
+        <h1 ng-show="page == 1 && !coin.preorder">Reserve nimble<strong>NODE</strong></h1>
+        <h1 ng-show="page == 1 && coin.preorder">Pre-Order nimble<strong>NODE</strong></h1>
+        <h1 ng-show="page == 2 && !coin.preorder">Reservation Complete!</h1>
+        <h1 ng-show="page == 2 && coin.preorder">Pre-Order Complete!</h1>
     </section>
 
     <section data-name="body">
         <div data-name="wrapper" ng-show="page == 1">
-            <p>You are only a couple of steps away from completing your reservation. We just need a few details from you to finalize everything!</p>
+            <p>You are only a couple of steps away from completing your <span ng-show="!coin.preorder">reservation</span><span ng-show="coin.preorder">pre-order</span>. We just need a few details from you to finalize everything!</p>
             <div data-name="form">
                 <h3>General Details</h3>
                 <div data-name="fields">
                     <div data-name="field">
                         <label>FIRST NAME</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.firstname">
                     </div>
                     <div data-name="field">
                         <label>LAST NAME</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.lastname">
                     </div>
                     <div data-name="field">
                         <label>EMAIL</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.email">
                     </div>
                 </div>
                 <h3>Shipping Details</h3>
                 <div data-name="fields">
                     <div data-name="field">
                         <label>COUNTRY</label>
-                        <select>
+                        <select ng-model="form.country">
                           <option></option>
                         	<option value="AF">Afghanistan</option>
                         	<option value="AX">Åland Islands</option>
@@ -286,30 +288,30 @@
                     </div>
                     <div data-name="field">
                         <label>STATE / PROVINCE</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.state">
                     </div>
                     <div data-name="field">
                         <label>CITY / TOWN</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.city">
                     </div>
                     <div data-name="field">
                         <label>STREET ADDRESS</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.street">
                     </div>
                     <div data-name="field">
                         <label>ZIP / POSTAL CODE</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.zipcode">
                     </div>
                 </div>
                 <h3>Feedback</h3>
                 <div data-name="fields">
                     <div data-name="field">
                         <label>HOW DID YOU FIND OUT ABOUT NIMBLE?</label>
-                        <textarea></textarea>
+                        <textarea ng-model="form.found_out_about_nimble"></textarea>
                     </div>
                     <div data-name="field">
                         <label>WERE YOU REFERRED BY SOMEONE?</label>
-                        <select>
+                        <select ng-model="form.referred_by">
                             <option></option>
                             <option value="YES">YES</option>
                             <option value="NO">NO</option>
@@ -317,36 +319,36 @@
                     </div>
                     <div data-name="field">
                         <label>DO YOU HAVE ANY QUESTIONS ABOUT NIMBLE NODE?</label>
-                        <textarea></textarea>
+                        <textarea ng-model="form.questions_about_nimble"></textarea>
                         <small>Responses will be emailed to you while you wait :)</small>
                     </div>
                 </div>
-                <a href="javascript:void(0);" class="button">SEND</a>
+                <button class="button" ng-click="send()" ng-disabled="!isValid()">SEND</button>
             </div>
         </div>
         <div data-name="holder" ng-show="page == 2">
-          <p>You have successfully reserved your nimbleNODE! As soon as your order is ready, you will receive an email with payment instructions. Shortly after making a payment, your nimbleNODE will be shipped.</p>
+          <p>You have successfully reserved your <strong ng-bind="coin.name"></strong> preloaded nimbleNODE! As soon as your order is ready, you will receive an email with payment instructions. Shortly after making a payment, your nimbleNODE will be shipped.</p>
           <div data-name="order">
               <strong>ORDER NUMBER</strong>
-              <span>1A33-F336-1836</span>
+              <span ng-bind="ordernumber"></span>
           </div>
           <div data-name="divider"></div>
           <div data-name="earn">
               <strong>Earn some crypto while you wait for your node</strong>
               <p>Simply share this link with others and claim as much as 20 BTH per referral when you receive your nimbleNODE. The more people you refer, the more crypto you can earn for yourself.</p>
-              <span>https://nimblenode.io/invite/D36aL</span>
+              <span>https://nimblenode.io/invite/<c ng-bind="referralcode"></c></span>
           </div>
           <div data-name="learnmore">
-              <p><a href="javascript:void(0);" target="_blank">Read more</a> about nimbleNODE or join the node conversation.</p>
+              <p>Find out more about nimbleNODE by joining the conversation.</p>
               <div data-name="options">
-                  <div data-name="option">
+                  <a href="https://twitter.com/nimbleNODE_" target="_blank" data-name="option">
                       <i class="fab fa-twitter"></i>
                       <span>Nimble Twitter</span>
-                  </div>
-                  <div data-name="option">
+                  </a>
+                  <a href="http://t.me/nimbleNODESupport" target="_blank" data-name="option">
                       <i class="fab fa-telegram-plane"></i>
                       <span>Nimble Chat</span>
-                  </div>
+                  </a>
               </div>
           </div>
         </div>

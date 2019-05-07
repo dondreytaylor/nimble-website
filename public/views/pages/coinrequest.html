@@ -11,36 +11,52 @@
     <section data-name="body">
         <div data-name="wrapper" ng-show="page == 1">
             <p>We love adding new coins and chains to nimbleNODE. At Nimble, we believe in equal opportunity to all projects, which means we do not look at exchange nor hashrate metrics.</p>
-            <p>All you have to do is fill out the following form, and we will do our best to add the coin/chain in an upcoming build.</p>
+            <p>All you have to do is fill out the following form in its entirety, and we will do our best to add the coin/chain in an upcoming build.</p>
             <div data-name="form">
                 <h3>Coin Details</h3>
                 <div data-name="fields">
                     <div data-name="field">
                         <label>COIN/CHAIN NAME</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.chain">
                     </div>
                     <div data-name="field">
                         <label>GITHUB</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.github">
                     </div>
                     <div data-name="field">
                         <label>TWITTER</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.twitter">
                     </div>
                     <div data-name="field">
                         <label>WEBSITE</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.website">
                     </div>
                     <div data-name="field">
                         <label>WHAT IS THIS COIN OR CHAIN BASED ON?</label>
-                        <input type="text">
+                        <input type="text" ng-model="form.based">
                     </div>
                 </div>
-                <a href="javascript:void(0);" class="button">SEND</a>
+                <h3>Support Contact Details</h3>
+                <div data-name="fields">
+                    <div data-name="field">
+                        <label>NAME</label>
+                        <input type="text" ng-model="form.contact_name">
+                    </div>
+                    <div data-name="field">
+                        <label>EMAIL</label>
+                        <input type="text" ng-model="form.contact_email">
+                    </div>
+                    <div data-name="field">
+                        <label>PROVIDE ANY LINKS TO THIS COIN'S GROUP CHAT/FORUM FOR SUPPORT? IF MORE THAN ONE, SEPERATE BY NEW LINE OR A COMMA.</label>
+                        <textarea type="text" ng-model="form.contact_support"></textarea>
+                        <small>e.g. IRC, Telegram, Slack, BitcoinTalk, Reddit, etc.</small>
+                    </div>
+                </div>
+                <button class="button" ng-disabled="!isValid()" ng-click="send()">SEND</button>
             </div>
         </div>
         <div data-name="wrapper" ng-show="page == 2">
-          <p>Your coin request has been successfully submitted. To get this coin added quicker, please contact us at <a href="javascript:void(0);">contact@nimblenode.io</a> or in the <a href="javascript:void(0);">nimble telegram group</a> if you can assist with development support for this coin.</p>
+          <p>Your coin request has been successfully submitted. To get this coin added quicker, please contact us at <a href="javascript:void(0);">contact@nimblenode.io</a> or in the <a href="http://t.me/nimbleNODESupport" target="_blank">nimble telegram group</a> if you can assist with development support for this coin.</p>
         </div>
     </section>
 

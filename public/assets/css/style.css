@@ -19,6 +19,18 @@
 @font-face {
   font-family: "HelveticaNeueMedium";
   src: url("/static/assets/fonts/helvetica-neue/medium.ttf") format("truetype"); }
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
 * {
   font-family: "HelveticaNeueRegular";
   box-sizing: border-box; }
@@ -112,6 +124,52 @@ header {
     color: #21D000; }
     .dark header div[data-name="wrapper"] div[data-name="links"] a:last-child:hover > div {
       background-color: #21D000; }
+
+.loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(33, 174, 7, 0.98);
+  z-index: 10; }
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  left: 50%;
+  margin-left: -40px;
+  top: 30%; }
+
+.spinner-text {
+  width: 90%;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 1rem;
+  top: 30%;
+  margin-top: 80px;
+  position: fixed;
+  left: 50%;
+  margin-left: -45%; }
+  .spinner-text p {
+    text-transform: uppercase; }
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out; }
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s; }
 
 section[data-name="introduction"] {
   overflow: auto;
@@ -567,7 +625,8 @@ section[data-name="yourfavoritecoin"] {
       border-radius: 2rem;
       text-decoration: none;
       text-align: center;
-      margin: 0 auto; }
+      margin: 0 auto;
+      cursor: pointer; }
       section[data-name="yourfavoritecoin"] div[data-name="content"] > .button:hover {
         background-color: #21D000;
         color: #000000; }
@@ -639,6 +698,12 @@ section[data-name="title"] {
 section[data-name="body"] {
   padding: 1rem 1rem 5rem 1rem;
   min-height: 100vh; }
+  section[data-name="body"] h3 {
+    line-height: 1.8; }
+  section[data-name="body"] li {
+    line-height: 1.8;
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem 0; }
   section[data-name="body"] p {
     line-height: 1.8;
     font-size: 0.9rem;
@@ -681,8 +746,9 @@ section[data-name="body"] {
         font-family: "HelveticaNeueMedium";
         font-size: 0.8rem;
         margin: 0 0 0.3rem 0;
-        display: block; }
-      section[data-name="body"] div[data-name="form"] div[data-name="field"] input[type="text"] {
+        display: block;
+        line-height: 1.5; }
+      section[data-name="body"] div[data-name="form"] div[data-name="field"] input {
         width: 100%;
         padding: 0.5rem 1rem;
         border-radius: 0.3rem;
@@ -708,8 +774,9 @@ section[data-name="body"] {
         border: none;
         -webkit-appearance: none;
         -moz-appearance: none; }
-    section[data-name="body"] div[data-name="form"] a.button {
-      max-width: 13rem;
+    section[data-name="body"] div[data-name="form"] .button {
+      max-width: 15rem;
+      width: 100%;
       color: #FFFFFF;
       text-align: center;
       display: block;
@@ -717,8 +784,11 @@ section[data-name="body"] {
       border-radius: 2rem;
       padding: 0.8rem 2rem;
       background-color: #21D000;
-      text-decoration: none; }
-      section[data-name="body"] div[data-name="form"] a.button:hover {
+      text-decoration: none;
+      cursor: pointer; }
+      section[data-name="body"] div[data-name="form"] .button[disabled] {
+        opacity: 0.3; }
+      section[data-name="body"] div[data-name="form"] .button:not([disabled]):hover {
         opacity: 0.8; }
   section[data-name="body"] div[data-name="questions"] {
     margin: 0 0 8rem 0; }
@@ -828,16 +898,17 @@ section[data-name="body"] {
       color: #21D000; }
     section[data-name="body"] div[data-name="learnmore"] div[data-name="options"] {
       text-align: center; }
-      section[data-name="body"] div[data-name="learnmore"] div[data-name="options"] div[data-name="option"] {
+      section[data-name="body"] div[data-name="learnmore"] div[data-name="options"] a[data-name="option"] {
         display: inline-block;
         margin: 1rem 2rem;
-        text-align: center; }
-        section[data-name="body"] div[data-name="learnmore"] div[data-name="options"] div[data-name="option"] i {
+        text-align: center;
+        text-decoration: none; }
+        section[data-name="body"] div[data-name="learnmore"] div[data-name="options"] a[data-name="option"] i {
           font-size: 2.8rem;
           display: block;
           margin: 0 0 0.5rem 0;
           color: #21D000; }
-        section[data-name="body"] div[data-name="learnmore"] div[data-name="options"] div[data-name="option"] span {
+        section[data-name="body"] div[data-name="learnmore"] div[data-name="options"] a[data-name="option"] span {
           display: block;
           text-align: center;
           font-size: 0.9rem;
@@ -849,6 +920,8 @@ section[data-name="body"] {
     font-family: "HelveticaNeueMedium";
     color: #21D000;
     margin: 0 auto 3rem auto; }
+  section[data-name="body"] small[data-name="order-notfound"] {
+    color: red !important; }
 
 section[data-name="item-options"] {
   padding: 10rem 0 3rem 0;
@@ -1042,6 +1115,9 @@ section[data-name="item-details"] {
           font-size: 0.9rem;
           margin: 0 0 1.5rem 0;
           line-height: 1.5; }
+
+main[ng-controller="CheckStatusController"] input {
+  text-align: center; }
 
 footer {
   width: 100%;

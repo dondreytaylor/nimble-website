@@ -36,6 +36,21 @@ $tablet: 64em;
   src: url("/static/assets/fonts/helvetica-neue/medium.ttf") format("truetype");
 }
 
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
 * {
   font-family: "HelveticaNeueRegular";
   box-sizing: border-box;
@@ -160,6 +175,60 @@ header {
           }
       }
   }
+}
+
+.loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(33,174,7,0.98);
+  z-index: 10;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+
+  position: fixed;
+  left: 50%;
+  margin-left: -40px;
+  top: 30%;
+}
+
+.spinner-text {
+    width: 90%;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 1rem;
+    top: 30%;
+    margin-top: 80px;
+    position: fixed;
+    left: 50%;
+    margin-left: -45%;
+    p {
+      text-transform: uppercase;
+    }
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
 }
 
 section[data-name="introduction"] {
@@ -701,6 +770,7 @@ section[data-name="yourfavoritecoin"] {
           text-decoration: none;
           text-align: center;
           margin: 0 auto;
+          cursor: pointer;
           &:hover {
             background-color: #21D000;
             color: #000000;
@@ -785,6 +855,16 @@ section[data-name="body"] {
     padding: 1rem 1rem 5rem 1rem;
     min-height: 100vh;
 
+    h3 {
+      line-height: 1.8;
+    }
+
+    li {
+      line-height: 1.8;
+      font-size: 0.9rem;
+      margin: 0 0 0.5rem 0;
+    }
+
     p {
       line-height: 1.8;
       font-size: 0.9rem;
@@ -841,8 +921,9 @@ section[data-name="body"] {
               font-size: 0.8rem;
               margin: 0 0 0.3rem 0;
               display: block;
+              line-height: 1.5;
             }
-            input[type="text"] {
+            input {
                width: 100%;
                padding: 0.5rem 1rem;
                border-radius: 0.3rem;
@@ -873,8 +954,9 @@ section[data-name="body"] {
                 -moz-appearance: none;
             }
         }
-        a.button {
-          max-width: 13rem;
+        .button {
+          max-width: 15rem;
+          width: 100%;
           color: #FFFFFF;
           text-align: center;
           display: block;
@@ -883,7 +965,11 @@ section[data-name="body"] {
           padding: 0.8rem 2rem;
           background-color: #21D000;
           text-decoration: none;
-          &:hover {
+          cursor: pointer;
+          &[disabled] {
+            opacity: 0.3;
+          }
+          &:not([disabled]):hover {
             opacity: 0.8
           }
         }
@@ -1027,10 +1113,11 @@ section[data-name="body"] {
         }
         div[data-name="options"] {
             text-align: center;
-            div[data-name="option"] {
+            a[data-name="option"] {
                 display: inline-block;
                 margin: 1rem 2rem;
                 text-align: center;
+                text-decoration: none;
                 i {
                   font-size: 2.8rem;
                   display: block;
@@ -1054,6 +1141,10 @@ section[data-name="body"] {
         font-family: "HelveticaNeueMedium";
         color: #21D000;
         margin: 0 auto 3rem auto;
+    }
+
+    small[data-name="order-notfound"] {
+        color: red!important;
     }
 }
 
@@ -1287,6 +1378,12 @@ section[data-name="item-details"] {
         }
     }
   }
+}
+
+main[ng-controller="CheckStatusController"] {
+    input {
+      text-align: center;
+    }
 }
 
 footer {
