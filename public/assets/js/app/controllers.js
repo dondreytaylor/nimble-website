@@ -43,7 +43,7 @@ angular.module('Application.controllers', [])
     }
 
     $scope.form.coin = $scope.coin;
-    $scope.form.qty = $scope.qty;
+    $scope.form.qty = $routeParams.qty;
     $scope.form.referrer = (typeof localStorage === "object") ? (localStorage.getItem("referrer") | "") : "";
 
     $scope.isValid = function() {
