@@ -126,6 +126,16 @@ var initialization = async function() {
 			}
 	});
 
+	// Bithereum Redirect
+	server.route({
+			method: 'GET',
+			path: '/bithereum',
+			handler: function(request, reply)
+			{
+					return reply.redirect("https://bithereum.network");
+			}
+	});
+	
 	// Handles coin requests
 	server.route({
 			method: 'POST',
