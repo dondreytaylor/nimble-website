@@ -24,7 +24,7 @@ angular.module('Application.factory', [])
             ]
         },
         {
-            preorder: false,
+            preorder: true,
             name:"Ethereum",
             shortname:"ethereum",
             comingsoon: [
@@ -42,7 +42,7 @@ angular.module('Application.factory', [])
             ]
         },
         {
-            preorder: false,
+            preorder: true,
             name:"Bitcoin",
             shortname:"bitcoin",
             comingsoon: [
@@ -58,7 +58,7 @@ angular.module('Application.factory', [])
             ]
         },
         {
-            preorder: false,
+            preorder: true,
             name:"Binance Chain",
             shortname: "binance",
             comingsoon: [
@@ -74,7 +74,7 @@ angular.module('Application.factory', [])
             ]
         },
         {
-            preorder: false,
+            preorder: true,
             name:"Bitcoin Gold",
             shortname:"bitcoingold",
             comingsoon: [
@@ -89,7 +89,7 @@ angular.module('Application.factory', [])
             ]
         },
         {
-            preorder: false,
+            preorder: true,
             name:"Bitcoin Cash",
             shortname:"bitcoincash",
             comingsoon: [
@@ -105,7 +105,7 @@ angular.module('Application.factory', [])
             ]
         },
         {
-            preorder: false,
+            preorder: true,
             name:"Bitcoin SV",
             shortname:"bitcoinsv",
             comingsoon: [

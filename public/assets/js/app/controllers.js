@@ -60,8 +60,7 @@ angular.module('Application.controllers', [])
             (!$scope.form.coin.preorder || $scope.form.street) &&
             (!$scope.form.coin.preorder || $scope.form.zipcode) &&
             $scope.form.found_out_about_nimble &&
-            $scope.form.referred_by &&
-            $scope.form.questions_about_nimble
+            $scope.form.referred_by
         );
     };
     $scope.send = function() {
