@@ -57,22 +57,22 @@ angular.module('Application.factory', [])
                 "Small, lightweight, and easy to bring with you anywhere",
             ]
         },
-        {
-            preorder: true,
-            name:"Binance Chain",
-            shortname: "binance",
-            comingsoon: [
-                "Ability to send within device range in next app update",
-                "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
-            ],
-            highlights: [
-                "Controllable through a single mobile application",
-                "Presynced pruned blockchain",
-                "Ability to track BNB balance as well as receive BNB within device range",
-                "Small, lightweight, and easy to bring with you anywhere",
-                "Compatiblity with Binance Chain based projects"
-            ]
-        },
+        // {
+        //     preorder: true,
+        //     name:"Binance Chain",
+        //     shortname: "binance",
+        //     comingsoon: [
+        //         "Ability to send within device range in next app update",
+        //         "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
+        //     ],
+        //     highlights: [
+        //         "Controllable through a single mobile application",
+        //         "Presynced pruned blockchain",
+        //         "Ability to track BNB balance as well as receive BNB within device range",
+        //         "Small, lightweight, and easy to bring with you anywhere",
+        //         "Compatiblity with Binance Chain based projects"
+        //     ]
+        // },
         {
             preorder: true,
             name:"Bitcoin Gold",
