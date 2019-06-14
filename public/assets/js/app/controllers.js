@@ -130,7 +130,7 @@ angular.module('Application.controllers', [])
         subname: "lime green special edition",
         price: 99,
         sale: 0.101,
-        special: "Get an additional 10% off when you "+ ($scope.coin.preorder ? "pre-order between May 1st and June 14th." : "join the waitlist."),
+        special: "Get an additional 10% off when you "+ ($scope.coin.preorder ? "pre-order between May 1st and July 14th." : "join the waitlist."),
         previews: [
             "/static/assets/images/products/nimble-limegreen/1.png",
             "/static/assets/images/products/nimble-limegreen/2.png",
