@@ -135,7 +135,7 @@ var initialization = async function() {
 					return reply.redirect("https://bithereum.network");
 			}
 	});
-	
+
 	// Handles coin requests
 	server.route({
 			method: 'POST',
