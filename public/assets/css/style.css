@@ -210,7 +210,7 @@ section[data-name="introduction"] {
       section[data-name="introduction"] div[data-name="content"] div[data-name="wrapper"] small {
         color: #FFFFFF;
         font-size: 0.85rem; }
-      section[data-name="introduction"] div[data-name="content"] div[data-name="wrapper"] strong {
+      section[data-name="introduction"] div[data-name="content"] div[data-name="wrapper"] > strong {
         margin: 2rem 0 0 0;
         display: block;
         line-height: 1.5;

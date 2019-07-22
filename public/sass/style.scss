@@ -274,7 +274,7 @@ section[data-name="introduction"] {
                 color: #FFFFFF;
                 font-size: 0.85rem;
               }
-              strong {
+              & > strong {
                 margin: 2rem 0 0 0;
                 display: block;
                 line-height: 1.5;
