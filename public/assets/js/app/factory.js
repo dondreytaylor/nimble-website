@@ -14,7 +14,9 @@ angular.module('Application.factory', [])
             highlights: [
                 "Controllable through a single mobile application",
                 "Presynced pruned blockchain",
-                "Ability to track BTH balance as well as receive BTH within device range",
+                "Ability to store as well as send/receive funds from your device.",
+                "Full end-to-end encryption as well as the ability to customize SSID/Passwords to create a secure VPN-like network",
+                "Remote access globally making nimble the easiest way to use your full node from anywhere!",
                 "Ready to run Proof-of-Uptime out-of-the-box",
                 "Built in node tool with PoU tier charts",
                 "Small, lightweight, and easy to bring with you anywhere",
@@ -32,7 +34,9 @@ angular.module('Application.factory', [])
             highlights: [
                 "Controllable through a single mobile application",
                 "Presynced pruned blockchain",
-                "Ability to track ETH balance as well as receive ETH within device range",
+                "Ability to store as well as send/receive funds from your device.",
+                "Full end-to-end encryption as well as the ability to customize SSID/Passwords to create a secure VPN-like network",
+                "Remote access globally making nimble the easiest way to use your full node from anywhere!",
                 "Small, lightweight, and easy to bring with you anywhere",
             ]
         },
@@ -46,7 +50,9 @@ angular.module('Application.factory', [])
             highlights: [
                 "Controllable through a single mobile application",
                 "Presynced pruned blockchain",
-                "Ability to track BTC balance as well as receive BTC within device range",
+                "Ability to store as well as send/receive funds from your device.",
+                "Full end-to-end encryption as well as the ability to customize SSID/Passwords to create a secure VPN-like network",
+                "Remote access globally making nimble the easiest way to use your full node from anywhere!",
                 "Small, lightweight, and easy to bring with you anywhere",
             ]
         },
@@ -75,7 +81,9 @@ angular.module('Application.factory', [])
             highlights: [
                 "Controllable through a single mobile application",
                 "Presynced pruned blockchain",
-                "Ability to track BTG balance as well as receive BTG within device range",
+                "Ability to store as well as send/receive funds from your device.",
+                "Full end-to-end encryption as well as the ability to customize SSID/Passwords to create a secure VPN-like network",
+                "Remote access globally making nimble the easiest way to use your full node from anywhere!",
                 "Small, lightweight, and easy to bring with you anywhere",
             ]
         },
@@ -89,7 +97,9 @@ angular.module('Application.factory', [])
             highlights: [
                 "Controllable through a single mobile application",
                 "Presynced pruned blockchain",
-                "Ability to track BCH balance as well as receive BCH within device range",
+                "Ability to store as well as send/receive funds from your device.",
+                "Full end-to-end encryption as well as the ability to customize SSID/Passwords to create a secure VPN-like network",
+                "Remote access globally making nimble the easiest way to use your full node from anywhere!",
                 "Small, lightweight, and easy to bring with you anywhere",
             ]
         },
@@ -102,7 +112,9 @@ angular.module('Application.factory', [])
             highlights: [
                 "Controllable through a single mobile application",
                 "Presynced pruned blockchain",
-                "Ability to track BSV balance as well as receive BSV within device range",
+                "Ability to store as well as send/receive funds from your device.",
+                "Full end-to-end encryption as well as the ability to customize SSID/Passwords to create a secure VPN-like network",
+                "Remote access globally making nimble the easiest way to use your full node from anywhere!",
                 "Small, lightweight, and easy to bring with you anywhere",
             ]
         },
