@@ -10,9 +10,6 @@ angular.module('Application.factory', [])
             name:"Bithereum",
             shortname:"bithereum",
             comingsoon: [
-                "Ability to send within device range in next app update",
-                "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
-                ""
             ],
             highlights: [
                 "Controllable through a single mobile application",
@@ -28,8 +25,6 @@ angular.module('Application.factory', [])
             name:"Ethereum",
             shortname:"ethereum",
             comingsoon: [
-                "Ability to send within device range in next app update",
-                "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
                 "Flyp.me and Morphtoken API plug-ins for quick crypto exchanging",
                 "Rocket Pool compatiblity for eventual PoS",
                 "ERC-20 compatiblity"
@@ -46,8 +41,6 @@ angular.module('Application.factory', [])
             name:"Bitcoin",
             shortname:"bitcoin",
             comingsoon: [
-                "Ability to send within device range in next app update",
-                "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
                 "Flyp.me and Morphtoken API plug-ins for quick crypto exchanging"
             ],
             highlights: [
@@ -78,8 +71,6 @@ angular.module('Application.factory', [])
             name:"Bitcoin Gold",
             shortname:"bitcoingold",
             comingsoon: [
-                "Ability to send within device range in next app update",
-                "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
             ],
             highlights: [
                 "Controllable through a single mobile application",
@@ -93,8 +84,6 @@ angular.module('Application.factory', [])
             name:"Bitcoin Cash",
             shortname:"bitcoincash",
             comingsoon: [
-                "Ability to send within device range in next app update",
-                "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
                 "Flyp.me and Morphtoken API plug-ins for quick crypto exchanging",
             ],
             highlights: [
@@ -109,8 +98,6 @@ angular.module('Application.factory', [])
             name:"Bitcoin SV",
             shortname:"bitcoinsv",
             comingsoon: [
-                "Ability to send within device range in next app update",
-                "Encrypted remote receiving, sending, and balance updates coming soon in nimblePremium",
             ],
             highlights: [
                 "Controllable through a single mobile application",
