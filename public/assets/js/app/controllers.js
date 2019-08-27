@@ -128,9 +128,9 @@ angular.module('Application.controllers', [])
     $scope.product = {
         name: "nimbleNODE",
         subname: "lime green special edition",
-        price: 99,
-        sale: 0.101,
-        special: "Get an additional 10% when you "+ ($scope.coin.preorder ? "pre-order." : "join the waitlist."),
+        price: 119,
+        sale: 0.25210084033,
+        special: "Get a one-time only discount for  "+ ($scope.coin.preorder ? "pre-ordering." : "joining the waitlist."),
         previews: [
             "/static/assets/images/products/nimble-limegreen/1.png",
             "/static/assets/images/products/nimble-limegreen/2.png",
