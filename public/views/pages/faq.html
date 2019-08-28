@@ -18,6 +18,13 @@
                     <p>Furthermore, having the entire blockchain downloaded is the most private way store, send, and receive crypto funds.</p>
                 </div>
                 <div data-name="question">
+                    <strong>Archival vs Prune</strong>
+                    <p>There are many different categories of full nodes that perform full validation, verify consensus rules, and relay transactions, but generally they fall under two types: archival and pruned.</p>
+                    <p>An archival node is generally what most people think about when they hear the term ‘full node’. The archival node, after full validation, has the entire blockchain downloaded, including the most recent chainstate to all previous chainstates back to genesis, and requires as much disk space as the chain size to store. This also allows others to sync directly from you since you have all necessary data for someone else to verify.</p>
+                    <p>A pruned node is a full node that after/upon syncing from genesis, throws away old, unnecessary block data as the newest chainstate data is updated, since only the recent chainstate is needed in order to verify the next block. This vastly reduces the disk space needed to run a full node, while still being a fully validating node that enforces consensus rules. However, others can’t sync from you since you don’t have the full data from genesis.</p>
+                    <p>With nimbleNODE, you get a pruned full node for the chain of your choice. Archival nodes are commonly used for to propagate older blocks to nodes that don’t have them, and services such as block explorers and infrastructure providers. Pruned nodes are a great, lightweight option for users who wish to have the security and privacy of a full node, while still participating in consensus and strengthening the network.</p>
+                </div>
+                <div data-name="question">
                     <strong>What is nimbleNODE?</strong>
                     <p>nimbleNODEs are plug-in-play chain agnostic full nodes that can be controlled anywhere from a mobile app. Unlike traditional full nodes that need to download an entire blockchain before they can be used, nimbleNODEs come with a verifiable pre-image of the blockchain of your choosing.</p>
                 </div>
