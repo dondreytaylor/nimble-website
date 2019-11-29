@@ -55,10 +55,6 @@ angular.module('Application.controllers', [])
             $scope.form.lastname &&
             $scope.form.email &&
             $scope.form.country &&
-            $scope.form.state &&
-            (!$scope.form.coin.preorder || $scope.form.city) &&
-            (!$scope.form.coin.preorder || $scope.form.street) &&
-            (!$scope.form.coin.preorder || $scope.form.zipcode) &&
             $scope.form.found_out_about_nimble &&
             $scope.form.referred_by
         );
