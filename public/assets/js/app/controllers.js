@@ -2,7 +2,7 @@
 
 angular.module('Application.controllers', [])
 
-.controller("LegalController", ["$scope", "$routeParams", function($scope, $routeParams) {
+.controller("DocController", ["$scope", "$routeParams", function($scope, $routeParams) {
       $scope.isHeaderHidden = $routeParams.hide_header === "true"
 }])
 
