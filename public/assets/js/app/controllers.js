@@ -7,6 +7,9 @@ angular.module('Application.controllers', [])
     if (code && typeof localStorage === "object") {
         localStorage.setItem("referrer", code);
     }
+    else {
+        $scope.isHeaderHidden = $routeParams.hide_header === "true"
+    }
 }])
 
 .controller("StoreController", ["$scope", "$routeParams", function($scope, $routeParams) {

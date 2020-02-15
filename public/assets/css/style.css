@@ -704,7 +704,7 @@ section[data-name="title"] {
         font-size: 1.8rem; } }
 
 section[data-name="body"] {
-  padding: 1rem 1rem 5rem 1rem;
+  padding: 5rem 1rem 5rem 1rem;
   min-height: 100vh; }
   section[data-name="body"] h3 {
     line-height: 1.8; }
