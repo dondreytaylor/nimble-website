@@ -1205,6 +1205,10 @@ footer {
     display: block;
     text-align: center;
     margin: 1rem 0 0.5rem 0; }
+  footer p {
+    text-align: center;
+    opacity: 0.5;
+    font-size: 0.9rem; }
   footer div[data-name="logo"] {
     width: 8rem;
     height: 8rem;
