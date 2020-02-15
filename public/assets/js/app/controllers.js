@@ -2,6 +2,10 @@
 
 angular.module('Application.controllers', [])
 
+.controller("LegalController", ["$scope", "$routeParams", function($scope, $routeParams) {
+      $scope.isHeaderHidden = $routeParams.hide_header === "true"
+}])
+
 .controller("LandingController", ["$scope", "$routeParams", function($scope, $routeParams) {
     let code = ($routeParams.code || "").toUpperCase();
     if (code && typeof localStorage === "object") {
