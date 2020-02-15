@@ -4,6 +4,7 @@ angular.module('Application.controllers', [])
 
 .controller("DocController", ["$scope", "$routeParams", function($scope, $routeParams) {
       $scope.isHeaderHidden = $routeParams.hide_header === "true"
+      $scope.isFooterHidden = $routeParams.hide_footer === "true"
 }])
 
 .controller("LandingController", ["$scope", "$routeParams", function($scope, $routeParams) {
